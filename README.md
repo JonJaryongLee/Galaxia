@@ -28,6 +28,9 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 ##9월 23일 작업내용
 기초 세팅중
 
+##9월 26일 작업내용
+인트로페이지 제작중. 로그인창 추가 예정
+
 ##9월 26일 회의내용
 로그인 페이지 이후 내 행성페이지 구현의논
 1. 행성이 있고 네비게이션 바
