@@ -4,6 +4,18 @@
       <transition name="welcomeAppear">
         <div class="welcomePage" v-if="welcomeShow">
           <h1 class="title">My Galaxy</h1>
+          <p class="facebookArea">
+            <span class="facebookSignUpContainer">
+              <button class="facebookSignUpBtn button button-glow button-border button-rounded button-primary">
+                <i class="facebookSignUpIcon fab fa-facebook-square"></i> <div class="signUpText">sign up</div>
+              </button>
+            </span>
+            <span class="facebookLogInContainer">
+              <button class="facebookLogInBtn button button-glow button-rounded button-raised button-primary">
+                <i class="facebookLogInIcon fab fa-facebook-square"></i> <div class="logInText">log in</div>
+              </button>
+            </span>
+          </p>
         </div>
       </transition>
     </div>
@@ -32,6 +44,11 @@ export default {
   },
   mounted(){
     this.welcomeShow=true;
+  },
+  methods:{
+    logIn(){
+      this.welcomeShow=false;
+    }
   }
 }
 </script>
@@ -74,5 +91,23 @@ export default {
   }
   .welcomeAppear-to{
     opacity: 1;
+  }
+
+  .signUpText, .logInText, .facebookLogInIcon, .facebookSignUpIcon {
+    display:inline;
+    padding:3px;
+    font-size: 1rem;
+  }
+
+  .facebookSignUpContainer, .facebookLogInContainer{
+    padding:10px;
+  }
+
+  .facebookSignUpBtn{
+    background-color: white;
+  }
+
+  .facebookArea{
+    margin-top: 100px;
   }
 </style>
