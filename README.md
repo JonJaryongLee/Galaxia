@@ -42,3 +42,7 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 	5. 설정: 내 프로필 설정: 상태메세지
 2. 귀여운 행성 및 솜사탕나무 등의 우주요소들을 취합할 것
 3. 나무를 클릭하면 물준다. 나무가 크면 솜사탕수확
+
+##9월 28일 작업내용
+1. 인트로 페이지 html파일로 옮겨버림. 차후 vue dev모드에서 production모드로 바꿀 것.
+2. 개인행성페이지 세팅중
