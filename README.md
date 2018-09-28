@@ -1,4 +1,4 @@
-# my_galaxy
+# Galaxia
 
 > personal space community
 
