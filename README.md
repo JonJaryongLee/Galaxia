@@ -45,4 +45,4 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 
 ##9월 28일 작업내용
 1. 인트로 페이지 html파일로 옮겨버림. 차후 vue dev모드에서 production모드로 바꿀 것.
-2. 개인행성페이지 세팅중
+2. 개인행성페이지 세팅중. 전체 배경색 spaceGray컬러로 설정.
