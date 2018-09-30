@@ -1,40 +1,31 @@
 <template>
   <div id="app">
-    <b-container>
-      <b-row>
-        <b-col>
-          <CottonCandyTree></CottonCandyTree>
-          <Planet></Planet>
-        </b-col>
-        <b-col>
-          <Nav></Nav>
-        </b-col>
-      </b-row> 
-    </b-container>
+    <sidebar></sidebar>
   </div>
 </template>
 
 <script>
 
-// bootstrap
-  import Vue from 'vue'
 
+  import Vue from 'vue'
+  // bootstrap
   import BootstrapVue from 'bootstrap-vue'
   Vue.use(BootstrapVue);
   import 'bootstrap/dist/css/bootstrap.css'
   import 'bootstrap-vue/dist/bootstrap-vue.css'
+  //vuesax
+  import Vuesax from 'vuesax'
+  import 'vuesax/dist/vuesax.css' //Vuesax styles
+  Vue.use(Vuesax);
+  import 'material-icons/iconfont/material-icons.css';
 
-  import CottonCandyTree from './components/CottonCandyTree.vue'
-  import Nav from './components/Nav.vue'
-  import Planet from './components/Planet.vue'
-
+  //child components
+  import sidebar from'./components/Sidebar.vue'
 
 export default {
   name: 'app',
   components: {
-    'CottonCandyTree': CottonCandyTree,
-    'Nav': Nav,
-    'Planet': Planet
+    sidebar:sidebar
   },
   data () {
     return {

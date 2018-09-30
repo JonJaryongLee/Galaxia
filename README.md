@@ -47,3 +47,6 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 1. 인트로 페이지 html파일로 옮겨버림. 차후 vue dev모드에서 production모드로 바꿀 것.
 2. 개인행성페이지 세팅중. 전체 배경색 spaceGray컬러로 설정.
 3. myPlanet페이지 레이아웃 작업중. 알바가야되서 작업못했는데  지금 중앙정렬이 cottonCandy로 되어있는데 Planet으로 바꾸고 솜사탕나무는 planet내부템플릿으로 빼버릴 것. 
+
+##9월 30일 작업내용
+1. 사이드바 작업중

@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "bootstrap-vue": "^2.0.0-rc.11",
+    "material-icons": "^0.2.3",
     "v-img": "^0.2.0",
-    "vue": "^2.5.11"
+    "vue": "^2.5.11",
+    "vuesax": "^3.4.7"
   },
   "browserslist": [
     "> 1%",
@@ -27,6 +29,9 @@
     "cross-env": "^5.0.5",
     "css-loader": "^0.28.7",
     "file-loader": "^1.1.4",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "url-loader": "^1.1.1",
     "vue-loader": "^13.0.5",
     "vue-template-compiler": "^2.4.4",
     "webpack": "^3.6.0",
