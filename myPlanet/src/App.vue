@@ -1,6 +1,15 @@
 <template>
   <div id="app">
     <sidebar></sidebar>
+    <div class="container">
+      <div class="outer">
+        <div class="inner">
+          <div class="centered">
+            <userPlanet class="userPlanet"></userPlanet>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -21,11 +30,13 @@
 
   //child components
   import sidebar from'./components/Sidebar.vue'
+  import userPlanet from './components/UserPlanet.vue'
 
 export default {
   name: 'app',
   components: {
-    sidebar:sidebar
+    sidebar:sidebar,
+    userPlanet:userPlanet
   },
   data () {
     return {
@@ -39,5 +50,28 @@ export default {
     display:flex;
     flex-direction: column;
     box-sizing:border-box;
+  }
+  .container {
+    width: 70%;
+    height: 500px;
+    margin: 40px auto;
+  }
+  .outer {
+    display: table;
+    width: 100%;
+    height: 100%;
+  }
+  .inner {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+  }
+  .centered {
+    position: relative;
+    display: inline-block;
+   
+    width: 80%;
+    padding: 1em;
+
   }
 </style>

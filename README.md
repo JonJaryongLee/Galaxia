@@ -50,3 +50,6 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 
 ##9월 30일 작업내용
 1. 사이드바 작업중
+
+##10월 1일 작업내용
+1. 임시 배경화면과 플래닛, 솜사탕나무 설치함.
