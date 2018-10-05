@@ -49,7 +49,6 @@ export default {
   #app{
     display:flex;
     flex-direction: column;
-    box-sizing:border-box;
   }
   .container {
     width: 70%;

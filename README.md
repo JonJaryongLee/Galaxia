@@ -53,3 +53,8 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 
 ##10월 1일 작업내용
 1. 임시 배경화면과 플래닛, 솜사탕나무 설치함.
+
+##10월 5일 작업내용
+1. 뒷 배경 바꿈
+2. myplanet 박스사이징 인덱스로 옮겨버림
+3. 행성과 솜사탕나무 잠시 꺼둠
