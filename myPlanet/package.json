@@ -14,7 +14,8 @@
     "material-icons": "^0.2.3",
     "v-img": "^0.2.0",
     "vue": "^2.5.11",
-    "vuesax": "^3.4.7"
+    "vuesax": "^3.4.7",
+    "vuetify": "^1.2.6"
   },
   "browserslist": [
     "> 1%",
@@ -22,6 +23,7 @@
     "not ie <= 8"
   ],
   "devDependencies": {
+    "@mdi/font": "^2.8.94",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.0",
@@ -29,6 +31,7 @@
     "cross-env": "^5.0.5",
     "css-loader": "^0.28.7",
     "file-loader": "^1.1.4",
+    "material-design-icons-iconfont": "^3.0.3",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
     "url-loader": "^1.1.1",

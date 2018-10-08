@@ -1,15 +1,7 @@
 <template>
   <div id="app">
     <sidebar></sidebar>
-    <div class="container">
-      <div class="outer">
-        <div class="inner">
-          <div class="centered">
-            <userPlanet class="userPlanet"></userPlanet>
-          </div>
-        </div>
-      </div>
-    </div>
+    <userPlanet></userPlanet>
   </div>
 </template>
 
@@ -26,7 +18,15 @@
   import Vuesax from 'vuesax'
   import 'vuesax/dist/vuesax.css' //Vuesax styles
   Vue.use(Vuesax);
-  import 'material-icons/iconfont/material-icons.css';
+  import 'material-icons/iconfont/material-icons.css'
+  //vuetify
+  import Vuetify from 'vuetify'
+  Vue.use(Vuetify, {
+    iconfont: 'mdi' // 'md' || 'mdi' || 'fa' || 'fa4'
+  });
+  import 'vuetify/dist/vuetify.min.css'
+  import 'material-design-icons-iconfont/dist/material-design-icons.css'
+  import '@mdi/font/css/materialdesignicons.css'
 
   //child components
   import sidebar from'./components/Sidebar.vue'
@@ -46,31 +46,5 @@ export default {
 </script>
 
 <style>
-  #app{
-    display:flex;
-    flex-direction: column;
-  }
-  .container {
-    width: 70%;
-    height: 500px;
-    margin: 40px auto;
-  }
-  .outer {
-    display: table;
-    width: 100%;
-    height: 100%;
-  }
-  .inner {
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-  }
-  .centered {
-    position: relative;
-    display: inline-block;
-   
-    width: 80%;
-    padding: 1em;
 
-  }
 </style>

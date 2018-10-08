@@ -58,3 +58,14 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 1. 뒷 배경 바꿈
 2. myplanet 박스사이징 인덱스로 옮겨버림
 3. 행성과 솜사탕나무 잠시 꺼둠
+
+##10월 6일 작업내용
+1. flex없애버림.
+
+##10월 8일 작업내용
+1. 사진 교체.
+2. vuetify 추가함. 현재 vuesax와 혼용하고 있어서 나중에 코드가 꼬일 수 있으므로 vuetify로 통일할 것.
+3. 앞으로 해야할 일: 
+	1. 행성 호버하면 특정한 애니메이션을 하도록
+	2. 솜사탕 나무 클릭하면 물주기 뜨기
+	3. 사이드바 작업...
