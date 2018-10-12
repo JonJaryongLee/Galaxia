@@ -1,8 +1,7 @@
 <template>
 	<div>
-		
 		<div class="home">
-			<img src="./image/planetcute_1200x1200.png" height="600" width="600">
+			<img src="./image/planetcute_1200x1200.png" height="600">
 			<div class="CCT">
 				<img src="./image/blueTree.png" height="100" width="70">
 			</div>
@@ -19,13 +18,13 @@
 <style type="text/css">
 	.CCT{
 		position: absolute;
-		top: 100px;
-		left: 450px;
+		top: 20px;
+		left: 550px;
 	}
 	.home{
 		position: relative;
-		top: 130px;
-		left:25%;
+		top: 150px;
+		left:20%;
 	}	
 
 </style>

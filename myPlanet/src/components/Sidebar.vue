@@ -2,12 +2,14 @@
     <div>
         <vs-button @click="active=!active"  vs-color="success"  vs-type="line" vs-icon="menu">menu</vs-button>
         <vs-sidebar parent="body" default-index="1" color="primary" class="sidebarx" spacer v-model="active">
+          <profilePicSetModal v-if="showProfileSetModal"></profilePicSetModal>
             <div class="header-sidebar" slot="header">
-                <vs-avatar size="70px" src="./src/assets/image/sample-avatar.jpg" />
+                <vs-avatar v-on:click="setProfilePic" size="70px" src="./src/assets/image/sample-avatar.jpg" />
                 <h4>
           Jony
           <vs-button vs-color="primary" vs-icon="more_horiz" vs-type="flat"></vs-button>
         </h4>
+
             </div>
             <vs-sidebar-item index="1" icon="home">
                 내 행성
@@ -43,10 +45,20 @@
 </template>
 
 <script type="text/javascript">
+  import profilePicSetModal from './common/ProfilePicSetModal.vue'
 	export default {
   data:()=>({
     active:false,
-  })
+    showProfileSetModal:false
+  }),
+  methods:{
+    setProfilePic(){
+      this.showProfileSetModal=true;
+    }
+  },
+  components:{
+    profilePicSetModal:profilePicSetModal
+  }
 }
 </script>
 
@@ -75,6 +87,5 @@
       border-radius 0px !important
 </style>
 <style scoped>
-
 	
 </style>
