@@ -87,9 +87,10 @@
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-toolbar-title>My Planet</v-toolbar-title>
     </v-toolbar>
-    <v-content>
-      <img id="bg" src="./assets/img/background.png" alt="background">
-      <userPlanet></userPlanet>
+    <v-content id="background">
+      <div>
+        <userPlanet></userPlanet>
+      </div>
     </v-content>
     <v-footer app fixed>
       <span>&copy; 2018. All right reserved. Powered by HHR.</span>
@@ -117,13 +118,11 @@ export default {
     display: block;
     text-align: center;
   }
-  #bg{
-      position: fixed; 
-      top: 0; 
-      left: 0; 
-      
-      /* Preserve aspet ratio */
-      min-width: 100%;
-      min-height: 100%;
+  #background{
+      background: url("assets/img/background.png") no-repeat center center fixed; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
   }
 </style>
