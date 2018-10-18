@@ -74,3 +74,4 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 1. 아예 vuetify로 템플릿 바꿔버림
 2. 현재 사진에 가려서 콘텐츠가 안 보이는 문제 발생. 해결에 집중할 것.
 3. 2번문제 해결. 배경을 이미지태그로 넣는 게 아니라 css background url로 적용
+4. 김호가 보내준 로그인파일을 프로젝트 파일에 추가함
