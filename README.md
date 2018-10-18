@@ -69,3 +69,7 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 	1. 행성 호버하면 특정한 애니메이션을 하도록
 	2. 솜사탕 나무 클릭하면 물주기 뜨기
 	3. 사이드바 작업...
+
+##10월 18일 작업내용
+1. 아예 vuetify로 템플릿 바꿔버림
+2. 현재 사진에 가려서 콘텐츠가 안 보이는 문제 발생. 해결에 집중할 것.
