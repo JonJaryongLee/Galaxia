@@ -20,7 +20,7 @@
         margin: 0;
     }
 
-    .bg {
+    #bg {
         /* The image used */
         background-image: url("cute_galaxy.png");
 
@@ -67,21 +67,18 @@
         opacity: 1;
     }
 
-    .signUpText,
     .logInText,
-    .facebookLogInIcon,
-    .facebookSignUpIcon {
+    .facebooklogInIcon {
         display: inline;
         padding: 3px;
         font-size: 1rem;
     }
 
-    .facebookSignUpContainer,
-    .facebookLogInContainer {
+    .facebooklogInContainer {
         padding: 10px;
     }
 
-    .facebookSignUpBtn {
+    .facebooklogInBtn {
         background-color: white;
     }
 
@@ -92,28 +89,24 @@
 </head>
 
 <body>
-    <div class="bg">
+    <div id="bg">
         <div id="app">
             <transition name="welcomeAppear">
                 <div class="welcomePage" v-if="welcomeShow">
                     <h1 class="title">My Galaxy</h1>
                     <p class="facebookArea">
-                        <span class="facebookSignUpContainer">
-              <button class="facebookSignUpBtn button button-glow button-border button-rounded button-primary">
-                <i class="facebookSignUpIcon fab fa-facebook-square"></i> <div class="signUpText">sign up</div>
-              </button>
-            </span>
-                        <span class="facebookLogInContainer">
-              <button class="facebookLogInBtn button button-glow button-rounded button-raised button-primary">
-                <i class="facebookLogInIcon fab fa-facebook-square"></i> <div class="logInText">log in</div>
-              </button>
-            </span>
+                        <span class="facebooklogInContainer">            
+                          <button class="facebooklogInBtn button button-glow button-border button-rounded button-primary" v-on:click="login">
+                            <i class="facebooklogInIcon fab fa-facebook-square"></i> <div class="logInText">Log In</div>
+                          </button>
+                        </span>
                     </p>
                 </div>
             </transition>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
+    <script src="login.js"></script>
     <script type="text/javascript">
     new Vue({
         el: '#app',
@@ -125,9 +118,13 @@
         mounted() {
             this.welcomeShow = true;
         },
-        methods: {
-            logIn() {
-                this.welcomeShow = false;
+        methods:{
+            login(){
+                user.login();
+                if(user.hasLogged()){
+                    // 성공했을 때 다음 http:// 주소로 빠진다.
+                    // location.href="https://##"
+                }
             }
         }
     });
