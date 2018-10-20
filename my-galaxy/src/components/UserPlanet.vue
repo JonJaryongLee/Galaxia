@@ -1,7 +1,7 @@
 <template>
 	<span class="planetContainer">
-		<img id="planet" src="../assets/img/Cute_earth.png" alt="planet">
-		<img id="CCTree" src="../assets/img/StarTree.png" alt="CCTree">
+		<img id="planet" src="../assets/img/DragonRiver.png" alt="planet">
+		<img id="CCTree" src="../assets/img/CCTPink.png" alt="CCTree">
 	</span>
 </template>
 
@@ -27,8 +27,8 @@
 }
 #CCTree{
 	position: absolute;
-	height:200px;
-	top:-50px;
+	height:100px;
+	top:20px;
 	left:400px;
 }
 </style>

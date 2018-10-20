@@ -82,3 +82,5 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 ##10월 20일 작업내용
 1. login.js파일 제외함
 2. 스택오버플로에 static폴더로 build option 변경하는거 질문함. 예전 left and right땐 알아서 static에 담겼던 것으로 확인됨.
+3. 2번은 김호가 해결함. 팩맨게임과 로그아웃, 프로필 설정 기능 추가.
+4. 황채린의 새 행성과 솜사탕나무 추가 
