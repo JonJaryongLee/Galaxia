@@ -78,3 +78,7 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 
 ##10월 19일 작업내용
 1. 클라이언트단 로그인함수 작성함 
+
+##10월 20일 작업내용
+1. login.js파일 제외함
+2. 스택오버플로에 static폴더로 build option 변경하는거 질문함. 예전 left and right땐 알아서 static에 담겼던 것으로 확인됨.

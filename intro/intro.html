@@ -106,7 +106,10 @@
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
-    <script src="login.js"></script>
+
+    <!-- 로그인 테스트 파일 추가함. -->
+    <script src="login.js"></script> 
+
     <script type="text/javascript">
     new Vue({
         el: '#app',
@@ -120,7 +123,7 @@
         },
         methods:{
             login(){
-                user.login();
+                user.login(); // 로그인 테스트파일의 로그인함수 사용.
                 if(user.hasLogged()){
                     // 성공했을 때 다음 http:// 주소로 빠진다.
                     // location.href="https://##"
