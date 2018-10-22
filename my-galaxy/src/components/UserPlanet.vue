@@ -1,7 +1,6 @@
 <template>
 	<span class="planetContainer">
-		<img id="planet" src="../assets/img/DragonRiver.png" alt="planet">
-		<img id="CCTree" src="../assets/img/CCTPink.png" alt="CCTree">
+		<img id="planet" src="../assets/img/planets/planet1.png" alt="planet">
 	</span>
 </template>
 
