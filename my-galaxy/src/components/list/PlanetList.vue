@@ -22,24 +22,24 @@
           <img class="planets" src="../../assets/img/planets/planet6.png" alt="planet6" v-on:click="showPlanetInfo('planet6')">
         </div>
         <div class="itemColume">
-          <img class="planets" src="../../assets/img/planets/commingSoon.png" alt="commingSoon" v-on:click="showPlanetInfo('planet7')">
+          <img class="planets" src="../../assets/img/planets/commingSoon.png" alt="commingSoon" v-on:click="showPlanetInfo('commingSoon')">
         </div>
         <div class="itemColume">
-          <img class="planets" src="../../assets/img/planets/commingSoon.png" alt="commingSoon" v-on:click="showPlanetInfo('planet8')">
+          <img class="planets" src="../../assets/img/planets/commingSoon.png" alt="commingSoon" v-on:click="showPlanetInfo('commingSoon')">
         </div>
       </div>
       <div class="itemRow">
         <div class="itemColume">
-          <img class="planets" src="../../assets/img/planets/commingSoon.png" alt="commingSoon" v-on:click="showPlanetInfo('planet9')">
+          <img class="planets" src="../../assets/img/planets/commingSoon.png" alt="commingSoon" v-on:click="showPlanetInfo('commingSoon')">
         </div>
         <div class="itemColume">
-          <img class="planets" src="../../assets/img/planets/commingSoon.png" alt="commingSoon" v-on:click="showPlanetInfo('planet10')">
+          <img class="planets" src="../../assets/img/planets/commingSoon.png" alt="commingSoon" v-on:click="showPlanetInfo('commingSoon')">
         </div>
         <div class="itemColume">
-          <img class="planets" src="../../assets/img/planets/commingSoon.png" alt="commingSoon" v-on:click="showPlanetInfo('planet11')">
+          <img class="planets" src="../../assets/img/planets/commingSoon.png" alt="commingSoon" v-on:click="showPlanetInfo('commingSoon')">
         </div>
         <div class="itemColume">
-          <img class="planets" src="../../assets/img/planets/commingSoon.png" alt="commingSoon" v-on:click="showPlanetInfo('planet12')">
+          <img class="planets" src="../../assets/img/planets/commingSoon.png" alt="commingSoon" v-on:click="showPlanetInfo('commingSoon')">
         </div>
       </div>
 
@@ -68,17 +68,18 @@
     top: 70px;
     left:25%;
     flex-direction: column;
+    border: 5px solid #4f5b66;
   }
   .itemRow{
     display: flex;
     flex-direction:row;
   }
   .itemColume{
-    border:10px solid white;
+    border:3px solid #4f5b66;
   }
   .planets{
     padding:40px;
-    width: 200px;
+    width: 210px;
     height: auto;
   }
 
