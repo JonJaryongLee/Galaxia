@@ -11,7 +11,9 @@
         <div class="curruntMoney headline">{{curruntMoney}}</div>
       </div>
       <div class="sellectedProductInfoBox">
-        <img id="sellectedImg" src="./planet1.png" alt="planet"></img>
+
+        <!-- 아래 src를 선택된 이미지로 수정해주세요 -->
+        <img id="sellectedImg" src="#" alt="planet"></img>
         <article class="itemOrPlanetDescription subheading">
           {{itemOrPlanetDescription}}
         </article>
@@ -63,7 +65,7 @@
     methods:{
       showInfo(reseivedData){
         this.itemOrPlanetData=reseivedData;
-        //console.log(this.itemOrPlanetData);
+        console.log(this.itemOrPlanetData);
         // itemOrPlanetData는 사용자가 선택한 영역의 행성 또는 아이템정보입니다. 이미지를 클릭할 때마다 왼쪽에 이미지와 설명, 가격을 출력해주세요.
         //document.getElementById("sellectedImg").src = "#";
       },
