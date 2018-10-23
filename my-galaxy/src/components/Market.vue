@@ -11,7 +11,7 @@
         <div class="curruntMoney headline">10,000</div>
       </div>
       <div class="sellectedProductInfoBox">
-        <img id="sellectedPlanetImg" v-if="showPlanet" src=""></img>
+        <img id="sellectedPlanetImg" src="./planet1.png" alt="planet"></img>
       </div>
       <div class="payFooterBox">
         <v-btn class="payBtn" color="success">구매하기</v-btn>
@@ -31,8 +31,7 @@
   export default {
     data () {
       return {
-        planetData:'',
-        showPlanet:false
+        planetData:''
       }
     },
     components:{
@@ -42,10 +41,8 @@
     methods:{
       showPlanetInfo(reseivedPlanet){
         this.planetData=reseivedPlanet;
-        console.log(this.planetData);
-        this.showPlanet=true;
-        console.log('플래닛이 돔에 부착되었군');
-        document.getElementById("sellectedPlanetImg").src="../assets/img/planets/planet1.png";
+        console.log("현재 행성은 "+this.planetData);
+        document.getElementById("sellectedPlanetImg").src = "#";
       }
     }
   }
