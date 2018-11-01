@@ -11,7 +11,7 @@
           <v-avatar class="mt-3 " :tile="false" :size="140">
             <!-- 실제 서비스할 땐 다음 사진을 사용합니다. -->
             <!-- <img src=" {{user_img}} " alt="avatar"> -->
-            <img src="./assets/img/profile.jpg" alt="avatar"> <!-- 테스트용 -->
+            <img src="./assets/img/profiles/jony.jpg" alt="avatar"> <!-- 테스트용 -->
           </v-avatar>
         </p>
         <p class="userName display-1">
@@ -72,12 +72,12 @@
         <settingDialog></settingDialog>
         
         <!-- 팩맨 게임 -->
-        <v-list-tile @click="runPackman">
+        <v-list-tile @click="runTetris">
           <v-list-tile-action>
             <v-icon>games</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title>팩맨 게임</v-list-tile-title>
+            <v-list-tile-title>우주 테트리스</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
         
@@ -156,6 +156,7 @@
 import userPlanet from './components/UserPlanet.vue'
 import settingDialog from './components/SettingDialog.vue'
 import market from './components/Market.vue'
+
 export default {
    data: () => ({
     drawer: true,
@@ -165,7 +166,8 @@ export default {
     showMarket:false,
     showDeco:false,
     showWar:false,
-    showFriends:false
+    showFriends:false,
+    showTetris:false
    }),
    props: {
      source: String
@@ -183,37 +185,43 @@ export default {
       //인트로 주소로 리다이렉트 됩니다.
       //window.location.replace("#");
     },
-    shotdown(){
+    shutdown(){
       this.showMyPlanet=false;
       this.showLookAround=false;
       this.showMarket=false;
       this.showDeco=false;
       this.showWar=false;
       this.showFriends=false;
+      this.showTetris=false;
     },
     runMyPlanet(){
-      this.shotdown();
+      this.shutdown();
       this.showMyPlanet=true;
     },
     runLookAround(){
-      this.shotdown();
+      this.shutdown();
       this.showLookAround=true;
     },
     runMarket(){
-      this.shotdown();
+      this.shutdown();
       this.showMarket=true;
     },
     runDeco(){
-      this.shotdown();
+      this.shutdown();
       this.showDeco=true;
     },
     runWar(){
-      this.shotdown();
+      this.shutdown();
       this.showWar=true;
     },
     runFriends(){
-      this.shotdown();
+      this.shutdown();
       this.showFriends=true;
+    },
+    runTetris(){
+      //아래에 실제 테트리스 주소를 적어주세요.
+      //window.open("https://#")
+
     }
    }
 }

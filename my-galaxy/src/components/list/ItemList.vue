@@ -78,9 +78,12 @@
     border:3px solid #4f5b66;
   }
   .items{
-    padding:40px;
-    width: 210px;
-    height: 210px;
+    padding-top:40px;
+    padding-bottom: 40px;
+    padding-right: 40px;
+    padding-left:40px;
+    width: 180px;
+    height: auto;
   }
 
 </style>

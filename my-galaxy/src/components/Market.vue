@@ -13,7 +13,7 @@
       <div class="sellectedProductInfoBox">
 
         <!-- 아래 src를 선택된 이미지로 수정해주세요 -->
-        <img id="sellectedImg" src="#" alt="planet"></img>
+        <img id="sellectedImg" src="./../assets/img/planets/planet1.png" alt="planet"></img>
         <article class="itemOrPlanetDescription subheading">
           {{itemOrPlanetDescription}}
         </article>
