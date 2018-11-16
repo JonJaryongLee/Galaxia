@@ -117,3 +117,4 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 	4. 상점, 꾸미기 빼버림
 	5. 프로필 설정 때 자기소개 한 줄 입력하도록 설정했으며, 닉네임 밑에 뜨도록 조치함.
 	6. 로그아웃 버튼 클릭 시 아래 Alert이 뜨는 게 아니라 다이얼로그가 뜨도록 조치함.
+	7. 로딩 할 일이 없어서 로딩 빼버림
