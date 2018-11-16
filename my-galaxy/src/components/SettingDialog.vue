@@ -27,7 +27,8 @@
 					>
 				</v-flex>
               <v-flex xs12>
-                <v-text-field label="이름" required></v-text-field>
+                <v-text-field label="이름"></v-text-field>
+                <v-text-field label="한줄소개" ></v-text-field>
               </v-flex>
             </v-layout>
           </v-container>
