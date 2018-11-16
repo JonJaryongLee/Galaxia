@@ -102,6 +102,9 @@
         friends
       </div>
     </v-content>
+    <v-content id="quiz" v-if="showQuiz">
+      <quiz></quiz>
+    </v-content>
 
 
     <v-footer app fixed>
@@ -114,6 +117,7 @@
 import userPlanet from './components/UserPlanet.vue'
 import settingDialog from './components/SettingDialog.vue'
 import logoutDialog from './components/LogoutDialog.vue'
+import quiz from './components/Quiz.vue'
 
 export default {
    data: () => ({
@@ -131,7 +135,8 @@ export default {
    components: {
     'userPlanet':userPlanet,
     'settingDialog':settingDialog,
-    'logoutDialog':logoutDialog
+    'logoutDialog':logoutDialog,
+    'quiz':quiz
    },
    methods:{
     logout(){
@@ -158,8 +163,8 @@ export default {
       this.showFriends=true;
     },
     runQuiz(){
-      //구현중
-
+      this.shutdown();
+      this.showQuiz=true;
     }
    }
 }
