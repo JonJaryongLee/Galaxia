@@ -7,7 +7,23 @@
   		</div>
 
 		<div class="quizbox">
-			<question3 v-on:answerCheck="expIncrease"></question3>
+			<transition>
+				<question1 v-if="q1show" v-on:answerCheck="expIncrease"
+				v-on:nextQ="nextQ"
+				></question1>
+			</transition>
+			<transition name="q2appear">
+				<question2 v-if="q2show"
+				v-on:answerCheck="expIncrease"
+				v-on:nextQ="nextQ"
+				></question2>
+			</transition>
+			<transition name="q3appear">
+				<question3 v-if="q3show"
+				v-on:answerCheck="expIncrease"
+				v-on:nextQ="nextQ"
+				></question3>
+			</transition>
 		</div>
 	</div>
 </template>
@@ -24,12 +40,37 @@
 		},
 		data(){
 			return{
-				exp: 0
+				q1show: true,
+				q2show: false,
+				q3show: false,
+				exp: 0,
+				level: 1
 			}
 		},
 		methods:{
 			expIncrease(receivedExp){
 				this.exp += receivedExp;
+				if(this.exp>100){
+					this.level++;
+					this.exp = this.exp-100;
+				}
+			},
+			nextQ(nextQuestionNum){
+				if(nextQuestionNum==1){
+					this.q2show = false;
+					this.q3show = false;
+					setTimeout(() => this.q1show = true, 50);
+				}
+				else if(nextQuestionNum==2){
+					this.q1show = false;
+					this.q3show = false;
+					setTimeout(() => this.q2show = true, 50);
+				}
+				else{
+					this.q1show = false;
+					this.q2show = false;
+					setTimeout(() => this.q3show = true, 50);
+				}
 			}
 		}
 	}

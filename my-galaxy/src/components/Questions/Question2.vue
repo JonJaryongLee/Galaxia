@@ -13,7 +13,7 @@
 		      transition="scale-transition"
 		    >
 		      정답입니다!
-		      <v-btn class="nextQuestion" color="teal accent-4">다음 문제</v-btn>
+		      <v-btn class="nextQuestion" color="teal accent-4"  v-on:click="nextQ">다음 문제</v-btn>
 		    </v-alert>
 
 		    <v-alert class="answerAlert"
@@ -45,6 +45,10 @@
 				}
 				else
 					this.wrongAlertShow=true;
+			},
+			//3번 문제로 넘어가기 위해, 버튼을 클릭하면 매개변수 3을 상위 컴포넌트로 보낸다.
+			nextQ(){
+				this.$emit('nextQ',3);
 			}
 		}
 	}
