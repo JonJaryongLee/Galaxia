@@ -32,6 +32,17 @@
             <v-list-tile-title>내 행성</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
+        
+        <!-- 퀴즈 게임 -->
+        <v-list-tile @click="runQuiz">
+          <v-list-tile-action>
+            <v-icon>games</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-content>
+            <v-list-tile-title>퀴즈 게임</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+
         <v-list-tile @click="runLookAround">
           <v-list-tile-action>
             <v-icon>explore</v-icon>
@@ -46,20 +57,6 @@
           </v-list-tile-action>
           <v-list-tile-content>
             <v-list-tile-title>친구들</v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
-        
-
-
-        
-        
-        <!-- 퀴즈 게임 -->
-        <v-list-tile @click="runQuiz">
-          <v-list-tile-action>
-            <v-icon>games</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-content>
-            <v-list-tile-title>퀴즈 게임</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
 
@@ -89,7 +86,7 @@
     </v-toolbar>
     <v-content id="myPlanet" v-if="showMyPlanet">
       <div>
-        <userPlanet></userPlanet>
+        <userPlanet v-bind:propsdata="choicedPlanet"></userPlanet>
       </div>
     </v-content>
     <v-content id="lookAround" v-if="showLookAround">
@@ -128,7 +125,7 @@ export default {
     showFriends:false,
     showQuiz:false,
     showPPT: false,
-    choicedPlanetNum: 0
+    choicedPlanet: ""
    }),
    props: {
      source: String
@@ -167,8 +164,8 @@ export default {
       this.shutdown();
       this.showQuiz=true;
     },
-    planetChoice(choicedPlanetNum){
-      this.choicedPlanetNum=choicedPlanetNum;
+    planetChoice(choicedPlanet){
+      this.choicedPlanet=choicedPlanet;
     }
    }
 }

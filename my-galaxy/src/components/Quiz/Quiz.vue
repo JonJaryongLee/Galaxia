@@ -31,10 +31,10 @@
 				></question3>
 			</transition>
 		</div>
-		<v-dialog v-model="levelUpChoice" persistent max-width="290">
+		<v-dialog v-model="levelUpChoice" persistent max-width="330">
 	      <v-card>
 	        <v-card-title class="headline">Level Up!</v-card-title>
-	        <v-card-text>행성을 업그레이드 하세요</v-card-text>
+	        <v-card-text>행성을 선택하세요</v-card-text>
 	        <v-card-actions>
 				<planetChoiceList v-on:planetChoice="planetChoice"></planetChoiceList>
 	        </v-card-actions>
@@ -95,8 +95,9 @@
 					setTimeout(() => this.q3show = true, 50);
 				}
 			},
-			planetChoice(choicedPlanetNum){
-				this.$emit('planetChoice',choicedPlanetNum);
+			planetChoice(choicedPlanet){
+				this.$emit('planetChoice',choicedPlanet);
+				this.levelUpChoice=false;
 			}
 		}
 	}

@@ -133,3 +133,6 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 2. 레벨 올라가면 행성 5개 중 선택하는 팝업 뜨게 함
 3. 프로젝트 파일 구조 바꿈.
 4. planetChoiceList에서 선택된 행성 넘버를 최상위 컴포넌트인 App으로 넘겨줌. log찍어봤을 때 잘 나옴.
+5. 인트로 배경 바꿈.
+6. 퀴즈 마무리하고 내 행성 항목 작업중. 선택창을 그림으로 바꾸고, 트랜지션 적용해 부드럽게 선택되게 만듦. 선택하면 최상위 컴포넌트인 App에 선택한 행성 이름이 전달됨. log찍어봤을 때 잘 나옴.
+7. 6번의 데이터를 하위컴포넌트인 UserPlanet으로 넘겨주었음. 백엔드는 src주소를 http로 바꾼 뒤 서버 안에 있는 사진 데이터에 http접근하도록 할 것.

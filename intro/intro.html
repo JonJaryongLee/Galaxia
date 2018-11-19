@@ -48,11 +48,11 @@
         margin: -50px 0 0 -50px;
         text-align: center;
     }
+    .title{
+        position: relative;
+        top:60px;
+        right:150px;
 
-    .title {
-        font-size: 5.5rem;
-        font-family: 'Space Mono', monospace;
-        color: white;
     }
 
     .welcomeAppear-enter {
@@ -83,7 +83,8 @@
     }
 
     .facebookArea {
-        margin-top: 100px;
+        position: relative;
+        top:150px;
     }
     </style>
 </head>
@@ -93,7 +94,9 @@
         <div id="app">
             <transition name="welcomeAppear">
                 <div class="welcomePage" v-if="welcomeShow">
-                    <h1 class="title">My Galaxy</h1>
+                    <div class="title">
+                        <img width="800px" src="intro.png" alt="intro">
+                    </div>
                     <p class="facebookArea">
                         <span class="facebooklogInContainer">            
                           <button class="facebooklogInBtn button button-glow button-border button-rounded button-primary" v-on:click="login">
