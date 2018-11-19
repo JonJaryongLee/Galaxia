@@ -132,3 +132,4 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 1. 경험치 옆에 레벨도 같이 보이게.
 2. 레벨 올라가면 행성 5개 중 선택하는 팝업 뜨게 함
 3. 프로젝트 파일 구조 바꿈.
+4. planetChoiceList에서 선택된 행성 넘버를 최상위 컴포넌트인 App으로 넘겨줌. log찍어봤을 때 잘 나옴.

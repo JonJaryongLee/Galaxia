@@ -36,7 +36,7 @@
 	        <v-card-title class="headline">Level Up!</v-card-title>
 	        <v-card-text>행성을 업그레이드 하세요</v-card-text>
 	        <v-card-actions>
-				<planetChoiceList></planetChoiceList>
+				<planetChoiceList v-on:planetChoice="planetChoice"></planetChoiceList>
 	        </v-card-actions>
 	      </v-card>
 	    </v-dialog>
@@ -94,6 +94,9 @@
 					this.q2show = false;
 					setTimeout(() => this.q3show = true, 50);
 				}
+			},
+			planetChoice(choicedPlanetNum){
+				this.$emit('planetChoice',choicedPlanetNum);
 			}
 		}
 	}

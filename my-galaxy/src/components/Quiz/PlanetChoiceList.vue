@@ -12,7 +12,7 @@
 	export default{
 		methods:{
 			planetChoice(choicedPlanetNum){
-				console.log(choicedPlanetNum);
+				this.$emit('planetChoice',choicedPlanetNum);
 			}
 		}
 	}

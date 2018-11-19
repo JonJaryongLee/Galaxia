@@ -103,7 +103,7 @@
       </div>
     </v-content>
     <v-content id="quiz" v-if="showQuiz">
-      <quiz></quiz>
+      <quiz v-on:planetChoice="planetChoice"></quiz>
     </v-content>
 
 
@@ -127,7 +127,8 @@ export default {
     showLookAround:false,
     showFriends:false,
     showQuiz:false,
-    showPPT: false
+    showPPT: false,
+    choicedPlanetNum: 0
    }),
    props: {
      source: String
@@ -165,6 +166,9 @@ export default {
     runQuiz(){
       this.shutdown();
       this.showQuiz=true;
+    },
+    planetChoice(choicedPlanetNum){
+      this.choicedPlanetNum=choicedPlanetNum;
     }
    }
 }
