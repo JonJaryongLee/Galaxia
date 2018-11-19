@@ -117,7 +117,7 @@
 import userPlanet from './components/UserPlanet.vue'
 import settingDialog from './components/SettingDialog.vue'
 import logoutDialog from './components/LogoutDialog.vue'
-import quiz from './components/Quiz.vue'
+import quiz from './components/Quiz/Quiz.vue'
 
 export default {
    data: () => ({

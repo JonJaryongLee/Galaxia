@@ -1,10 +1,10 @@
 <template>
 	<div class="quizbox">
-			<div class="quizQuestion display-1">질량을 가진 물질은 무엇이든 간에 서로 끌어당기는 힘을 가지고 있다고 한다. 이 법칙의 이름은?</div>
-			<v-btn class="quizAnswers" v-bind:disabled="answerBtnDisabled" v-on:click="answerCheck('false')" block color="indigo">1. 허블의 법칙</v-btn>
-			<v-btn class="quizAnswers" v-bind:disabled="answerBtnDisabled" v-on:click="answerCheck('true')" block color="indigo">2. 만류인력의 법칙</v-btn>
-			<v-btn class="quizAnswers" v-bind:disabled="answerBtnDisabled" v-on:click="answerCheck('false')" block color="indigo">3. 관성의 법칙</v-btn>
-			<v-btn class="quizAnswers" v-bind:disabled="answerBtnDisabled" v-on:click="answerCheck('false')" block color="indigo">4. 상대성 이론</v-btn>
+			<div class="quizQuestion display-1">웜홀의 출구로 알려져 있으나 아직 증명되지 않은 것은?</div>
+			<v-btn class="quizAnswers" v-bind:disabled="answerBtnDisabled" v-on:click="answerCheck('true')" block color="indigo">1. 화이트홀</v-btn>
+			<v-btn class="quizAnswers" v-bind:disabled="answerBtnDisabled" v-on:click="answerCheck('false')" block color="indigo">2. 블랙홀</v-btn>
+			<v-btn class="quizAnswers" v-bind:disabled="answerBtnDisabled" v-on:click="answerCheck('false')" block color="indigo">3. 블루홀</v-btn>
+			<v-btn class="quizAnswers" v-bind:disabled="answerBtnDisabled" v-on:click="answerCheck('false')" block color="indigo">4. 엑시드홀</v-btn>
 
 			
 			<v-alert class="answerAlert"
@@ -41,14 +41,14 @@
 					this.wrongAlertShow=false;
 					this.collectAlertShow=true;
 					this.answerBtnDisabled=true;
-					this.$emit('answerCheck',34);
+					setTimeout(() => this.$emit('answerCheck',34), 50);
 				}
 				else
 					this.wrongAlertShow=true;
 			},
-			//1번 문제로 돌아가기 위해, 버튼을 클릭하면 매개변수 1를 상위 컴포넌트로 보낸다.
+			//3번 문제로 넘어가기 위해, 버튼을 클릭하면 매개변수 3을 상위 컴포넌트로 보낸다.
 			nextQ(){
-				this.$emit('nextQ',1);
+				this.$emit('nextQ',3);
 			}
 		}
 	}

@@ -8,7 +8,7 @@
 
 			
 			<v-alert class="answerAlert"
-		      :value="collectAlertShow"
+		      :value="correctAlertShow"
 		      type="success"
 		      transition="scale-transition"
 		    >
@@ -30,7 +30,7 @@
 	export default{
 		data(){
 			return{
-				collectAlertShow: false,
+				correctAlertShow: false,
 				wrongAlertShow: false,
 				answerBtnDisabled: false
 			}
@@ -39,9 +39,9 @@
 			answerCheck(answer){
 				if(answer=="true"){
 					this.wrongAlertShow=false;
-					this.collectAlertShow=true;
+					this.correctAlertShow=true;
 					this.answerBtnDisabled=true;
-					this.$emit('answerCheck',34);
+					setTimeout(() => this.$emit('answerCheck',34), 50);
 				}
 				else
 					this.wrongAlertShow=true;
