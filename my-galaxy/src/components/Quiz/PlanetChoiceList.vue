@@ -8,6 +8,7 @@
 
 <script type="text/javascript">
 	export default{
+
 		methods:{
 			planetChoice(choicedPlanet){
 				this.$emit('planetChoice',choicedPlanet);

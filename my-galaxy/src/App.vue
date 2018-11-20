@@ -86,7 +86,7 @@
     </v-toolbar>
     <v-content id="myPlanet" v-if="showMyPlanet">
       <div>
-        <userPlanet v-bind:propsdata="choicedPlanet"></userPlanet>
+        <userPlanet v-bind:propsdata="toUserPlanet"></userPlanet>
       </div>
     </v-content>
     <v-content id="lookAround" v-if="showLookAround">
@@ -100,7 +100,11 @@
       </div>
     </v-content>
     <v-content id="quiz" v-if="showQuiz">
-      <quiz v-on:planetChoice="planetChoice"></quiz>
+      <quiz 
+      v-on:planetChoice="planetChoice"
+      v-on:expIncrease="expIncrease"
+      v-bind:propsdata="levelAndExp"
+      ></quiz>
     </v-content>
 
 
@@ -125,8 +129,34 @@ export default {
     showFriends:false,
     showQuiz:false,
     showPPT: false,
-    choicedPlanet: ""
+    choicedPlanet: "default", // 실제 선택된 행성을 넣어주세요
+    level:1, // 실제 유저 레벨을 넣어주세요
+    exp:0, // 실제 유저 경험치를 넣어주세요
+    money:0, // 실제 유저 보유금액을 넣어주세요
+    planetQuantity: 1, // 실제 유저 보유행성갯수를 넣어주세요
+    
+    toUserPlanet:[], //하위인 userPlanet컴포넌트로 보냅니다. 아래의 데이터를 포함합니다.
+    // 0: choicedPlanet
+    // 1: level
+    // 2: exp 
+    // 3: money
+    // 4: planetQuantity
+
+
+    levelAndExp:[] // 하위인 quiz컴포넌트로 보냅니다.
    }),
+   created(){
+    this.levelAndExp[0]=this.level;
+    this.levelAndExp[1]=this.exp;
+    this.toUserPlanet[0]=this.choicedPlanet;
+    this.toUserPlanet[1]=this.level;
+    this.toUserPlanet[2]=this.exp;
+    this.toUserPlanet[3]=this.money;
+    this.toUserPlanet[4]=this.planetQuantity;
+    // console.log("AppVue의 행성: "+this.choicedPlanet);
+    // console.log("AppVue의 레벨: "+this.level);
+    // console.log("AppVue의 경험치: "+this.exp);
+   },
    props: {
      source: String
    },
@@ -166,6 +196,15 @@ export default {
     },
     planetChoice(choicedPlanet){
       this.choicedPlanet=choicedPlanet;
+      this.level = 2;
+      this.toUserPlanet[0] = this.choicedPlanet;
+      this.toUserPlanet[1] = 2;
+    },
+    expIncrease(level,exp){
+      this.level=level;
+      this.exp=exp;
+      this.toUserPlanet[1] = this.level;
+      this.toUserPlanet[2] = this.exp;
     }
    }
 }
@@ -176,23 +215,12 @@ export default {
     display: block;
     text-align: center;
   }
-  #myPlanet{
+  #myPlanet, #lookAround, #quiz, #friends{
       background: url("assets/img/background.png") no-repeat center center fixed; 
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover;
   }
-  #lookAround{
-    background: url("assets/img/ORION.header.jpg") no-repeat center center fixed; 
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-  }
-  #introWar{
-    color:gray;
-    font-size: 10rem;
-    padding:50px;
-  }
+
 </style>
