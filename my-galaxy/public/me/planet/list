@@ -1,0 +1,37 @@
+[
+    {
+        "level": 1,
+        "name": "default",
+        "img": "/me/planet1.png"
+    },
+    {
+        "level": 2,
+        "name": "watermelon",
+        "img": "/me/planet2.png"
+    },
+    {
+        "level": 3,
+        "name": "watermelon",
+        "img": "/me/planet4.png"
+    },
+    {
+        "level": 4,
+        "name": "watermelon",
+        "img": "/me/planet5.png"
+    },
+    {
+        "level": 2,
+        "name": "fishball",
+        "img": "/me/planet3.png"
+    },
+    {
+        "level": 3,
+        "name": "fishball",
+        "img": "/me/planet6.png"
+    },
+    {
+        "level": 4,
+        "name": "fishball",
+        "img": "/me/planet7.png"
+    }
+]

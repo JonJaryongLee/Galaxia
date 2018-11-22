@@ -1,20 +1,27 @@
 <template>
 	<div class="choicePlanets">
-		<img src="../../assets/img/planets/watermelon1.png" height="100" alt="행성1" class="choicePlanet1" v-on:click="planetChoice('watermelon')">
-		<img src="../../assets/img/planets/fishball1.png" height="100" alt="행성2" class="choicePlanet2" v-on:click="planetChoice('fishball')">
-
+		<img :src=choice.img height="100" alt="행성1" class="choicePlanet"
+             v-for="choice in choices" :key="choice.img" v-on:click="setPlanet(choice.name, choice.img)">
 	</div>
 </template>
 
 <script type="text/javascript">
-	export default{
+    export default {
+        data: () => ({
+            choices: []
+        }),
 
-		methods:{
-			planetChoice(choicedPlanet){
-				this.$emit('planetChoice',choicedPlanet);
-			}
-		}
-	}
+        methods:{
+            // 상위 컴포넌트로부터 선택지를 하나 받아옵니다.
+            pushChoice(planet) {
+                this.choices.push(planet);
+            },
+            // 사용자가 행성을 선택합니다.
+            setPlanet(name, img) {
+                this.$emit('setPlanet', name, img);
+            }
+        }
+    }
 </script>
 
 <style type="text/css">
@@ -22,20 +29,12 @@
 		position: relative;
 		left:20px;
 	}
-	.choicePlanet1{
+	.choicePlanet{
 		position: relative;
 		margin: 20px;
 		transition: all 0.3s;
 	}
-	.choicePlanet1:hover{
-		transform: scale(1.2);
-	}
-	.choicePlanet2{
-		position: relative;
-		margin: 20px;
-		transition: all 0.3s;
-	}
-	.choicePlanet2:hover{
+	.choicePlanet:hover{
 		transform: scale(1.2);
 	}
 

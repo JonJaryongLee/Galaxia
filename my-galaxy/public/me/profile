@@ -1,0 +1,27 @@
+{
+    "name": "user's name",
+    "comment": "user's comment will be here.",
+    "planets": [
+        {
+            "num": 0,
+            "name": "default",
+            "img": "me/planet1.png",
+            "level": 1,
+            "exp": 0
+        }
+    ],
+    "friends": [
+        {
+            "num": 0,
+            "img": "me/friend1.jpg",
+            "name": "friend's name",
+            "comment": "friend's comment will be here."
+        },
+        {
+            "num": 1,
+            "img": "https://www.google.co.kr/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png",
+            "name": "\uad6c\uae00 \uce5c\uad6c",
+            "comment": "\ud55c\uc904\uc18c\uac1c"
+        }
+    ]
+}

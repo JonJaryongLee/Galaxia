@@ -1,0 +1,25 @@
+{
+    "question": "다음 중 가장 맛있는 채소는?",
+    "choices": [
+        {
+            "num": 1,
+            "text": "당근",
+            "is_answer": "false"
+        },
+        {
+            "num": 2,
+            "text": "배추",
+            "is_answer": "false"
+        },
+        {
+            "num": 3,
+            "text": "무",
+            "is_answer": "false"
+        },
+        {
+            "num": 4,
+            "text": "감자",
+            "is_answer": "true"
+        }
+    ]
+}
