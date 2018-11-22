@@ -4,6 +4,7 @@
 			<div>레벨: {{level}}</div>
 			<div>경험치: {{exp}}</div>
 			<div>현재 보유하고 있는 행성 갯수: {{num_planets}}</div>
+			<div>돈: {{money}}</div>
 		</div>
 		<span class="planetContainer">
 			<img id="planet">
@@ -18,7 +19,8 @@
             return {
                 level: 0,
                 exp: 0,
-                num_planets: 0,
+                money: 0,
+                num_planets: 0
             }
         },
 
@@ -29,6 +31,9 @@
                 // 상위 컴포넌트로부터 유저의 행성 정보 리스트를 불러옵니다.
                 this.planets = planets;
                 this.updatePlanetState();
+			},
+			initMoney(money){
+				this.money=money;
 			},
 
 			// 현재의 행성 정보를 가져옵니다.

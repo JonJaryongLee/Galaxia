@@ -155,3 +155,4 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 	3. 퀴즈 기능을 완전히 구현함.
 	4. 퀴즈 기능과 내 행성이 연동됨.
 	5. 버그수정.
+2. 카로셀 테스트중

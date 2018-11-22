@@ -1,6 +1,7 @@
 {
     "name": "user's name",
     "comment": "user's comment will be here.",
+    "money":340000,
     "planets": [
         {
             "num": 0,
