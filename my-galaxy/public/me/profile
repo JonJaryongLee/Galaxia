@@ -9,6 +9,20 @@
             "img": "me/planet1.png",
             "level": 1,
             "exp": 0
+        },
+        {
+            "num": 1,
+            "name": "watermelon",
+            "img": "me/planet2.png",
+            "level": 2,
+            "exp": 0
+        },
+        {
+            "num": 2,
+            "name": "fishball",
+            "img": "me/planet3.png",
+            "level": 2,
+            "exp": 0
         }
     ],
     "friends": [

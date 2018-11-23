@@ -1,14 +1,57 @@
 <template>
 	<div>
-		<div class="infoBox">
-			<div>레벨: {{level}}</div>
-			<div>경험치: {{exp}}</div>
-			<div>현재 보유하고 있는 행성 갯수: {{num_planets}}</div>
-			<div>돈: {{money}}</div>
-		</div>
-		<span class="planetContainer">
+		<v-carousel
+		  :cycle="false"
+		  :height=680
+		>
+			<v-carousel-item>
+				<div class="infoBox">
+					<div>레벨: {{level}}</div>
+					<div>경험치: {{exp}}</div>
+					<div>현재 보유하고 있는 행성 갯수: {{num_planets}}</div>
+				</div>
+				<span class="planetContainer">
+					<img class="planet" :src="planets[0].img" alt="planets">
+				</span>
+			</v-carousel-item>
+			<v-carousel-item>
+				<div class="infoBox">
+					<div>레벨: {{level}}</div>
+					<div>경험치: {{exp}}</div>
+					<div>현재 보유하고 있는 행성 갯수: {{num_planets}}</div>
+				</div>
+				<span class="planetContainer">
+					<img class="planet" :src="planets[1].img" alt="planets">
+				</span>
+			</v-carousel-item>
+			<v-carousel-item>
+				<div class="infoBox">
+					<div>레벨: {{level}}</div>
+					<div>경험치: {{exp}}</div>
+					<div>현재 보유하고 있는 행성 갯수: {{num_planets}}</div>
+				</div>
+				<span  class="planetContainer">
+					<img class="planet" :src="planets[2].img" alt="planets">
+				</span>
+			</v-carousel-item>
+
+			<v-carousel-item class="lastCarouselContainer">
+				<div class="doYouWantToBuy">
+					새로운 토지를 구매하시겠습니까?
+				</div>
+				<div class="moneyInfo">현재 보유금액: {{money}}
+					<div class="priceInfo">
+						토지는 100원입니다.
+					</div>
+				</div>
+				<v-btn v-on:click="checkMoney" round large class="buyButton" color="blue">Yes</v-btn>
+			</v-carousel-item>
+			
+		</v-carousel>
+		
+		<!-- <span class="planetContainer">
 			<img id="planet">
-		</span>
+		</span> -->
 	</div>
 </template>
 
@@ -20,7 +63,10 @@
                 level: 0,
                 exp: 0,
                 money: 0,
-                num_planets: 0
+                num_planets: 0,
+                planets:[],
+                idx_view:0,
+                planet_url:""
             }
         },
 
@@ -70,6 +116,14 @@
 				this.planet_url = planet.img;
 				// 이미지를 다운로드합니다.
                 document.getElementById("planet").src = this.planet_url;
+			},
+
+			checkMoney(){
+				if(this.money<100)
+					alert("돈이 부족합니다!");
+				else{
+					//구현중
+				}
 			}
         }
     }
@@ -84,6 +138,34 @@
 		width:550px;
 		height:auto;
 		margin: 0 auto;
+	}
+	.planet{
+		position: relative;
+		height: 500px;
+	}
+	.doYouWantToBuy{
+		position: relative;
+		top:170px;
+		left:140px;
+		font-size: 4rem;
+	}
+	.moneyInfo{
+		position: relative;
+		top:230px;
+		left:450px;
+		font-size: 2rem
+	}
+	.buyButton{
+		position: relative;
+		top:300px;
+		left:500px;
+	}
+	.priceInfo{
+		position: relative;
+		top:20px;
+		left:30px;
+		font-size:1.2rem;
+		color: aqua;
 	}
 	#planet{
 		position: relative;

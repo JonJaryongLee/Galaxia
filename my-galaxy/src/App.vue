@@ -62,16 +62,6 @@
                         <v-list-tile-title>최종발표 PPT</v-list-tile-title>
                     </v-list-tile-content>
                 </v-list-tile>
-
-                <!-- 테스트섹션 -->
-                <v-list-tile color="yellow" @click="runTest">
-                    <v-list-tile-action>
-                        <v-icon color="yellow">record_voice_over</v-icon>
-                    </v-list-tile-action>
-                    <v-list-tile-content>
-                        <v-list-tile-title>코드 테스트</v-list-tile-title>
-                    </v-list-tile-content>
-                </v-list-tile>
        
                 <!-- 로그아웃 창 -->
                 <logoutDialog></logoutDialog>
@@ -110,11 +100,6 @@
                 <ppt></ppt>
             </div>
         </v-content>
-        <v-content id="test" v-show="showTest">
-            <div>
-                <carousels></carousels>
-            </div>
-        </v-content>
 
 
 
@@ -133,7 +118,6 @@
     import settingDialog from './components/SettingDialog.vue'
     import userPlanet from './components/UserPlanet.vue'
     import ppt from './components/PPT.vue'
-    import carousels from './components/Carousels.vue'
 
     export default {
         data: () => ({
@@ -144,7 +128,6 @@
             showFriends: false,
             showQuiz: false,
             showPPT: false,
-            showTest: false,
 
             name: '',
             comment: '',
@@ -160,7 +143,6 @@
                 .then( response => {
                     // 프로필을 갱신합니다.
                     this.updateProfile(response.data);
-
                     // 행성 정보 및 친구 정보를 컴포넌트에 제공합니다.
                     this.$refs["myPlanet"].initPlanet(response.data.planets);
                     this.$refs["myPlanet"].initMoney(response.data.money);
@@ -194,7 +176,6 @@
             'friendDialog': friendDialog,
             'quiz': quiz,
             'ppt' : ppt,
-            'carousels':carousels
         },
         methods: {
             shutdown() {
@@ -203,7 +184,6 @@
                 this.showFriends=false;
                 this.showQuiz=false;
                 this.showPPT=false;
-                this.showTest=false;
             },
             // 사용자의 프로필을 변경합니다.
             updateProfile(data) {
@@ -262,12 +242,8 @@
             runPPT(){
               this.shutdown();
               this.showPPT=true;
-            },
-            runTest(){
-              this.shutdown();
-              this.showTest=true;
             }
-        },
+        }
     }
 </script>
 
