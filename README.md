@@ -167,4 +167,4 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 4. 갑자기 무슨 일인지 모르겠지만 친구들이 작동 안함/
 5. 행성 갯수는 카로셀 아래 동그라미로 충분히 유추 가능하므로 빼버림. 
 6. 각 행성별 레벨과 경험치는 추후 말풍선으로 예쁘게 바꿀 예정
-7.CannotSetPurchase.vue 파일은 필요가 없어 임포트 빼고 지우려했으나 이미 어딘가에 쓰여져있는지 지우면 에러뜨고 앱 실행 안 됨. 그래서 그냥 놔둠
+7. CannotSetPurchase.vue 파일은 필요가 없어 임포트 빼고 지우려했으나 이미 어딘가에 쓰여져있는지 지우면 에러뜨고 앱 실행 안 됨. 그래서 그냥 놔둠
