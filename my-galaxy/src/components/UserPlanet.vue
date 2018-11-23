@@ -8,7 +8,6 @@
 				<div class="infoBox">
 					<div>레벨: {{level}}</div>
 					<div>경험치: {{exp}}</div>
-					<div>현재 보유하고 있는 행성 갯수: {{num_planets}}</div>
 				</div>
 				<span class="planetContainer">
 					<img class="planet" :src="planets[0].img" alt="planets">
@@ -52,6 +51,28 @@
 		<!-- <span class="planetContainer">
 			<img id="planet">
 		</span> -->
+		<v-dialog
+		  v-model="cannotPurchaseAlertShow"
+		  max-width="200px"
+		  transition="dialog-transition"
+		>
+		  <v-card>
+	        <v-card-text>
+				돈이 부족합니다!
+	        </v-card-text>
+	        <v-card-actions>
+	          <v-spacer></v-spacer>
+	          <v-btn
+	            color="primary"
+	            flat
+	            @click="cannotPurchaseAlertShow = false"
+	          >
+	            확인
+	          </v-btn>
+	        </v-card-actions>
+	      </v-card>
+		</v-dialog>
+		
 	</div>
 </template>
 
@@ -66,7 +87,8 @@
                 num_planets: 0,
                 planets:[],
                 idx_view:0,
-                planet_url:""
+                planet_url:"",
+                cannotPurchaseAlertShow:false
             }
         },
 
@@ -120,7 +142,7 @@
 
 			checkMoney(){
 				if(this.money<100)
-					alert("돈이 부족합니다!");
+					this.cannotPurchaseAlertShow=true;
 				else{
 					//구현중
 				}
