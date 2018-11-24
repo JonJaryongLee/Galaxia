@@ -225,7 +225,7 @@
 		width: 180px;
 		top:80px;
 		left:850px;
-		border:4px solid #00539C;
+		border:4px solid white;
 		border-radius: 10px;
 	}
 	.speech-bubble:before{
@@ -234,7 +234,7 @@
 		height: 0px;
 		position: absolute;
 		border-left: 10px solid transparent;
-		border-right: 10px solid #00539C;
+		border-right: 10px solid white;
 		border-top: 10px solid transparent;
 		border-bottom: 10px solid transparent;
 		top:80px;

@@ -170,5 +170,5 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 7. CannotSetPurchase.vue 파일은 필요가 없어 임포트 빼고 지우려했으나 이미 어딘가에 쓰여져있는지 지우면 에러뜨고 앱 실행 안 됨. 그래서 그냥 놔둠
 
 ##11월 24일 작업내용
-1. 내 행성 영역 말풍선 작업함.
+1. 내 행성 영역 말풍선 작업함. 흰색으로 설정
 2. 친구들 항목 작업하려는데 에러때문에 현재 파일에선 작업 불가. 그래서 호가 저번에 보내준 파일로 작업 시작.
