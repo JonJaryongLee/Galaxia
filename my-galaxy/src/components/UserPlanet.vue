@@ -4,30 +4,49 @@
 		  :cycle="false"
 		  :height=680
 		>
-			<v-carousel-item>
-				<div class="infoBox">
-					<div>레벨: {{level}}</div>
-					<div>경험치: {{exp}}</div>
+			<v-carousel-item>	
+				<div class="speech-bubble">
+					<div class="levelAndExpBox">
+						<div class="lvBox">
+							레벨 {{level}}
+						</div>
+						<div class="expBox">
+							경험치
+							<v-progress-linear v-model="exp"></v-progress-linear>
+						</div>
+					</div>
 				</div>
 				<span class="planetContainer">
 					<img class="planet" :src="planets[0].img" alt="planets">
 				</span>
 			</v-carousel-item>
 			<v-carousel-item>
-				<div class="infoBox">
-					<div>레벨: {{level}}</div>
-					<div>경험치: {{exp}}</div>
-					<div>현재 보유하고 있는 행성 갯수: {{num_planets}}</div>
+				<div class="speech-bubble">
+					<div class="levelAndExpBox">
+						<div class="lvBox">
+							레벨 {{level}}
+						</div>
+						<div class="expBox">
+							경험치
+							<v-progress-linear v-model="exp"></v-progress-linear>
+						</div>
+					</div>
 				</div>
 				<span class="planetContainer">
 					<img class="planet" :src="planets[1].img" alt="planets">
 				</span>
 			</v-carousel-item>
 			<v-carousel-item>
-				<div class="infoBox">
-					<div>레벨: {{level}}</div>
-					<div>경험치: {{exp}}</div>
-					<div>현재 보유하고 있는 행성 갯수: {{num_planets}}</div>
+				<div class="speech-bubble">
+					<div class="levelAndExpBox">
+						<div class="lvBox">
+							레벨 {{level}}
+						</div>
+						<div class="expBox">
+							경험치
+							<v-progress-linear v-model="exp"></v-progress-linear>
+						</div>
+					</div>
 				</div>
 				<span  class="planetContainer">
 					<img class="planet" :src="planets[2].img" alt="planets">
@@ -199,4 +218,33 @@
 		top:20px;
 		left:400px;
 	}
+	.speech-bubble{
+		display: inline-block;
+		position: relative;
+		height: 120px;
+		width: 180px;
+		top:80px;
+		left:850px;
+		border:4px solid #00539C;
+		border-radius: 10px;
+	}
+	.speech-bubble:before{
+		content: "";
+		width: 0px;
+		height: 0px;
+		position: absolute;
+		border-left: 10px solid transparent;
+		border-right: 10px solid #00539C;
+		border-top: 10px solid transparent;
+		border-bottom: 10px solid transparent;
+		top:80px;
+		left: -23px;
+	}
+	.levelAndExpBox{
+		padding:10px;
+	}
+	.expBox{
+		margin-top:20px;
+	}
+
 </style>
