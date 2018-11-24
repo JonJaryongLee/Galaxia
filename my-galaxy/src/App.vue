@@ -111,6 +111,8 @@
 
 <script>
     import axios from 'axios'
+    import 'simplebar'; // 또는 "simplebar '에서 SimpleBar 가져 오기;" 수동으로 사용하려는 경우 
+    import 'simplebar/dist/simplebar.css';
 
     import friendDialog from './components/FriendDialog.vue'
     import logoutDialog from './components/LogoutDialog.vue'
@@ -248,6 +250,9 @@
 </script>
 
 <style type="text/css">
+    ::-webkit-scrollbar { 
+        display: none; 
+    }
     .userName, .userIntroduction{
         display: block;
         text-align: center;
