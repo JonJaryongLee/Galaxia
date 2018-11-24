@@ -173,3 +173,4 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 1. 내 행성 영역 말풍선 작업함. 흰색으로 설정
 2. 친구들 항목 작업하려는데 에러때문에 현재 파일에선 작업 불가. 그래서 호가 저번에 보내준 파일로 작업 시작.
 3. 스크롤바 숨김. 커스텀 스크롤바 임포트해서 쓰고 있음 (npm simple var)
+4. 친구들 데모 작업 완료. 그러나 친구들페이지 에러때문에 작동 안 함.

@@ -29,14 +29,44 @@
         {
             "num": 0,
             "img": "me/friend1.jpg",
-            "name": "friend's name",
-            "comment": "friend's comment will be here."
+            "name": "김호",
+            "comment": "감자가 좋아"
         },
         {
             "num": 1,
-            "img": "https://www.google.co.kr/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png",
-            "name": "\uad6c\uae00 \uce5c\uad6c",
-            "comment": "\ud55c\uc904\uc18c\uac1c"
+            "img": "me/friend2.jpg",
+            "name": "이자룡",
+            "comment": "사내답게 살자 ~~!@#^^"
+        },
+        {
+            "num": 2,
+            "img": "me/friend3.jpg",
+            "name": "황채린",
+            "comment": "정민아 사랑해"
+        },
+        {
+            "num": 3,
+            "img": "me/friend4.jpg",
+            "name": "박준수",
+            "comment": "렌즈를 살까 고민중"
+        },
+        {
+            "num": 4,
+            "img": "me/friend5.jpg",
+            "name": "Sylvie Tarrié",
+            "comment": "Bonjour"
+        },
+        {
+            "num": 5,
+            "img": "me/friend6.jpg",
+            "name": "James Oh",
+            "comment": "자룡아 미국으로 돌아와라"
+        },
+        {
+            "num": 6,
+            "img": "me/friend7.jpg",
+            "name": "이효균",
+            "comment": "자룡아 니 아버지다"
         }
     ]
 }

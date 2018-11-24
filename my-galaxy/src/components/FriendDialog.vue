@@ -1,26 +1,35 @@
 <template>
-	<div class="infoBox friendsContainer">
-		<ul>
-            <li class="friendElement" v-for="item in friends" :key="item.num">
-                <table border="0">
-                    <tr>
-                        <td rowspan="2">
-                            <img class="friendImage" :src="item.img">
-                        </td>
-                        <td class="friendContent">
-                            <h1>{{ item.name }}</h1>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="friendContent">
-                            {{ item.comment }}
-                        </td>
-                    </tr>
-                </table>
-            </li>
-		</ul>
-	</div>
+    <div>
+        <div class="infoBox friendsContainer" data-simplebar>
+            <ul>
+                <li class="friendElement" v-for="item in friends" :key="item.num">
+                    <table border="0">
+                        <tr>
+                            <td rowspan="2">
+                                <v-avatar class="avatar"
+                                  :tile="tile"
+                                  :size=4
+                                  color="grey lighten-4"
+                                >
+                                    <img class="friendImage" :src="item.img">
+                                </v-avatar>
+                          </td>
+                            <td class="friendContent">
+                                <h1>{{ item.name }}</h1>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="friendContent">
+                                {{ item.comment }}
+                            </td>
+                        </tr>
+                    </table>
+                </li>
+            </ul>
+        </div>
+    </div>
 </template>
+
 
 <script type="text/javascript">
     export default{
@@ -34,21 +43,23 @@
         methods: {
             initFriend(friends) {
                 this.friends = friends;
-			},
+            },
         }
     }
 </script>
 
 <style scoped>
-	.friendsContainer {
+    .friendsContainer {
         position: absolute;
-        top: 15%;
-        left: 10%;
+        top: 5%;
+        left: 5%;
         display: block;
-        width: 750px;
-        height: 550px;
+        height: 580px;
+        width: 1000px;
         margin: 0 auto;
-        overflow: scroll;
+    }
+    .avatar{
+        margin:50px 50px 50px 30px;
     }
     .friendImage {
         width: 100px;
@@ -59,4 +70,6 @@
     }
     .friendElement {
     }
+
+
 </style>
