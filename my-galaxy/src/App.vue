@@ -259,7 +259,7 @@
         display: block;
         text-align: center;
     }
-    #myPlanet, #lookAround, #quiz, #friends{
+    #myPlanet, #quiz, #friends{
         background: url("assets/img/background.png") no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
