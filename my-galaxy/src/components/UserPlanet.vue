@@ -156,7 +156,8 @@
                 this.num_planets = this.planets.length;
 				this.planet_url = planet.img;
 				// 이미지를 다운로드합니다.
-                document.getElementById("planet").src = this.planet_url;
+				//해당 아이디를 가진 요소가 없어졌으므로 변경이 필요합니다/
+                // document.getElementById("planet").src = this.planet_url;
 			},
 
 			checkMoney(){

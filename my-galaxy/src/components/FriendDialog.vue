@@ -7,7 +7,6 @@
                         <tr>
                             <td rowspan="2">
                                 <v-avatar class="avatar"
-                                  :tile="tile"
                                   :size=4
                                   color="grey lighten-4"
                                 >

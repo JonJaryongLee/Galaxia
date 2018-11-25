@@ -9,7 +9,7 @@
             <v-list dense>
                 <p class="text-xs-center">
                     <v-avatar class="mt-3 " :tile="false" :size="140">
-                        <img :src=user_img alt="avatar">
+                        <img :src=user_img max-height="auto" width="10px" alt="avatar">
                     </v-avatar>
                 </p>
                 <p ref="userName" class="userName display-1">{{name}}</p>
@@ -80,9 +80,7 @@
             </div>
         </v-content>
         <v-content id="lookAround" v-show="showLookAround">
-            <div>
-        
-            </div>
+            <lookAround></lookAround>
         </v-content>
         <v-content id="friends" v-show="showFriends">
             <div>
@@ -111,12 +109,14 @@
 
 <script>
     import axios from 'axios'
-    import 'simplebar'; // 또는 "simplebar '에서 SimpleBar 가져 오기;" 수동으로 사용하려는 경우 
-    import 'simplebar/dist/simplebar.css';
+    import 'simplebar' // 또는 "simplebar '에서 SimpleBar 가져 오기;" 수동으로 사용하려는 경우 
+    import 'simplebar/dist/simplebar.css'
+    
 
     import friendDialog from './components/FriendDialog.vue'
     import logoutDialog from './components/LogoutDialog.vue'
     import quiz from './components/Quiz/Quiz.vue'
+    import lookAround from './components/LookAround.vue'
     import settingDialog from './components/SettingDialog.vue'
     import userPlanet from './components/UserPlanet.vue'
     import ppt from './components/PPT.vue'
@@ -134,7 +134,7 @@
             name: '',
             comment: '',
             money: '',
-            user_img: '/me/img',
+            user_img: '/me/default_img.jpg',
             planets: []
         }),
         created(){
@@ -178,6 +178,7 @@
             'friendDialog': friendDialog,
             'quiz': quiz,
             'ppt' : ppt,
+            'lookAround' : lookAround,
         },
         methods: {
             shutdown() {

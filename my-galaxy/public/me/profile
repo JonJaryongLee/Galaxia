@@ -1,13 +1,14 @@
 {
-    "name": "user's name",
-    "comment": "user's comment will be here.",
-    "money":340000,
+    "name": "Sylvie",
+    "comment": "I love you Jon",
+    "money":0,
+    "img": "me/Sylvie.jpg",
     "planets": [
         {
             "num": 0,
             "name": "default",
             "img": "me/planet1.png",
-            "level": 2,
+            "level": 1,
             "exp": 30
         },
         {
