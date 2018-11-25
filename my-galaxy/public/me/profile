@@ -24,6 +24,34 @@
             "img": "me/planet3.png",
             "level": 2,
             "exp": 0
+        },
+        {
+            "num": 3,
+            "name": "fishball",
+            "img": "me/planet3.png",
+            "level": 2,
+            "exp": 0
+        },
+        {
+            "num": 4,
+            "name": "fishball",
+            "img": "me/planet3.png",
+            "level": 2,
+            "exp": 0
+        },
+        {
+            "num": 5,
+            "name": "fishball",
+            "img": "me/planet3.png",
+            "level": 2,
+            "exp": 0
+        },
+        {
+            "num": 6,
+            "name": "fishball",
+            "img": "me/planet3.png",
+            "level": 2,
+            "exp": 0
         }
     ],
     "friends": [

@@ -80,7 +80,7 @@
             </div>
         </v-content>
         <v-content id="lookAround" v-show="showLookAround">
-            <lookAround></lookAround>
+            <lookAround ref="lookAround"></lookAround>
         </v-content>
         <v-content id="friends" v-show="showFriends">
             <div>
@@ -147,6 +147,7 @@
                     this.updateProfile(response.data);
                     // 행성 정보 및 친구 정보를 컴포넌트에 제공합니다.
                     this.$refs["myPlanet"].initPlanet(response.data.planets);
+                    this.$refs["lookAround"].initLookAround(response.data.planets);
                     this.$refs["myPlanet"].initMoney(response.data.money);
                     this.$refs["myFriend"].initFriend(response.data.friends);
 

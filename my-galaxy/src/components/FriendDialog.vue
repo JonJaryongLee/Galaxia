@@ -48,6 +48,9 @@
 </script>
 
 <style scoped>
+    ul{
+        list-style: none;
+    }
     .friendsContainer {
         position: absolute;
         top: 5%;
