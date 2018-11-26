@@ -181,3 +181,9 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 3. 그러나 여전히 통신 타이밍때문에 뜨는 에러는 해결하지 못하였는데, 이는 axios가 받아오는 시점과 화면에 그리는 시점이 어긋나서 생기는 문제로 생각됨. 그러나 에러문구만 뜨지 작동상 문제는 없으므로 계속 진행하겠음. 추후 에러가 거슬리면 수정할 것.
 4. 친구들의 list 아이콘 없애버림
 5. 드래그 앤 드롭 구현 실패. vue라이브러리 중 가장 심플한 걸 써보았으나 못써먹을 라이브러리였음. 이번 주 작업 끝
+
+##11월 26일 작업내용
+1. html로 드래그 앤 드롭 구현 성공함. 그러나 그것을 뷰에 적용하려니깐 에러메세지 뜨며 작동 안함. 에러메세지는 다음과 같다.
+	1. Uncaught ReferenceError: drag is not defined at HTMLDivElement.ondragstart ((index):17)
+	2. Uncaught ReferenceError: allowDrop is not defined at HTMLDivElement.ondragover ((index):17)
+2. 성공한 예제는 test.html이며, Galaxia-myGalaxy-DragTest폴더에 담겨있다.
