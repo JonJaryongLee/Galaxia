@@ -109,7 +109,7 @@
     import lookAround from './components/LookAround/LookAround.vue'
     import settingDialog from './components/SettingDialog.vue'
     import userPlanet from './components/UserPlanet.vue'
-    import ppt from './components/PPT.vue'
+    import ppt from './components/PPT/PPT.vue'
     import messageBox from './components/MessageBox.vue'
 
     export default {
