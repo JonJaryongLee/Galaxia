@@ -3,6 +3,23 @@
     "comment": "I love you Jon",
     "money":0,
     "img": "me/Sylvie.jpg",
+    "messages": [
+        {
+            "num": 0,
+            "from": "김호",
+            "message": "감자 좋아하세요?ㅋㅋㅋ12323@@@"
+        },
+        {
+            "num": 1,
+            "from": "이자룡",
+            "message": "실비야 사랑해"
+        },
+        {
+            "num": 2,
+            "from": "박준수",
+            "message": "자룡아 난 멋진 해군이 될거야"
+        }
+    ],
     "planets": [
         {
             "num": 0,
@@ -48,6 +65,27 @@
         },
         {
             "num": 6,
+            "name": "fishball",
+            "img": "me/planet3.png",
+            "level": 2,
+            "exp": 0
+        },
+        {
+            "num": 7,
+            "name": "fishball",
+            "img": "me/planet3.png",
+            "level": 2,
+            "exp": 0
+        },
+        {
+            "num": 8,
+            "name": "fishball",
+            "img": "me/planet3.png",
+            "level": 2,
+            "exp": 0
+        },
+        {
+            "num": 9,
             "name": "fishball",
             "img": "me/planet3.png",
             "level": 2,

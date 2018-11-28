@@ -91,7 +91,7 @@
                 data.append('comment', this.uploadUserComment);
                 data.append('img', this.imageFile, this.imageFile.name);
 
-                axios.post('/me/profile', data, this.config)
+                axios.post('/me/update', data, this.config)
                 // SUCCESS
                     .then( response => {
                         this.$emit('updateProfile', response.data);

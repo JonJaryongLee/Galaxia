@@ -1,53 +1,21 @@
 <template>
     <div>
-        <v-carousel :cycle="false" :height=680>
-            <v-carousel-item>
+        <v-carousel :cycle='false' :height=680 ref="carousel">
+            <v-carousel-item v-for="planet in planets" :key="planet.num">
                 <div class="speech-bubble">
                     <div class="levelAndExpBox">
                         <div class="lvBox">
-                            레벨 {{level}}
+                            레벨 {{planet.level}}
                         </div>
                         <div class="expBox">
                             경험치
-                            <v-progress-linear v-model="exp"></v-progress-linear>
+                            <v-progress-linear v-model="planet.exp"></v-progress-linear>
                         </div>
                     </div>
                 </div>
                 <span class="planetContainer">
-					<img class="planet" :src="planets[0].img" alt="planets">
-				</span>
-            </v-carousel-item>
-            <v-carousel-item>
-                <div class="speech-bubble">
-                    <div class="levelAndExpBox">
-                        <div class="lvBox">
-                            레벨 {{level}}
-                        </div>
-                        <div class="expBox">
-                            경험치
-                            <v-progress-linear v-model="exp"></v-progress-linear>
-                        </div>
-                    </div>
-                </div>
-                <span class="planetContainer">
-					<img class="planet" :src="planets[1].img" alt="planets">
-				</span>
-            </v-carousel-item>
-            <v-carousel-item>
-                <div class="speech-bubble">
-                    <div class="levelAndExpBox">
-                        <div class="lvBox">
-                            레벨 {{level}}
-                        </div>
-                        <div class="expBox">
-                            경험치
-                            <v-progress-linear v-model="exp"></v-progress-linear>
-                        </div>
-                    </div>
-                </div>
-                <span  class="planetContainer">
-					<img class="planet" :src="planets[2].img" alt="planets">
-				</span>
+                    <img class="planet" :src="planet.img" alt="planets">
+                </span>
             </v-carousel-item>
             <v-carousel-item class="lastCarouselContainer">
                 <div class="doYouWantToBuy">
@@ -62,8 +30,8 @@
             </v-carousel-item>
         </v-carousel>
         <!-- <span class="planetContainer">
-			<img id="planet">
-		</span> -->
+            <img id="planet">
+        </span> -->
         <v-dialog v-model="cannotPurchaseAlertShow" max-width="200px" transition="dialog-transition">
             <v-card>
                 <v-card-text>
@@ -106,10 +74,17 @@ export default {
         initMoney(money) {
             this.money = money;
         },
+        
+        getCurrentKey() {
+            return this.$refs["carousel"].internalIndex;
+        },
 
         // 현재의 행성 정보를 가져옵니다.
         getCurrentPlanet() {
-            return this.planets[this.idx_view];
+            let key = this.getCurrentKey();
+            // 현재 key 는 1부터 시작합니다.
+            if (key-- <= 0) key = 0;
+            return this.planets[key];
         },
 
         // 현재 행성의 레벨과 경험치를 설정합니다.
