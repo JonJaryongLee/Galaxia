@@ -147,7 +147,7 @@
                     this.$refs["myQuiz"].initQuiz(planet.level, planet.exp);
 
                     //메세지가 있는지 확인합니다.
-                    if(response.data.messages)
+                    if(response.data.newMessageFlag)
                         this.newMessageAlert = true;
                     //메세지박스로 메세지를 보냅니다.
                     this.$refs["messageBox"].initMessageBox(response.data.messages);
@@ -264,6 +264,11 @@
             runMessageDialog(){
                 this.newMessageAlert=false;
                 this.showMessageBoxDialog=true;
+                //백엔드에게 요청합니다.
+                //이 함수는 메세지 다이알로그를 여는 창입니다. 그러니 이 함수가 실행되면 새 매세지 알림이 사라져야 합니다.
+                //public/profile 파일 안의 newMessageFlag를 false로 바꿔주세요.
+                //
+                //
             },
             closeMessageBox(){
                 this.showMessageBoxDialog=false;

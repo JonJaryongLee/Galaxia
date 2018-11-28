@@ -192,4 +192,5 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 1. FriendDialog의 메세지 기능 추가. 대시 구분선 추가. 메시지의 ValidCheck기능 있음. 아예 안 쓰면 보내기 작동 안하고, 40자 넘어가도 작동 안함
 2. ppt 프로젝트에 추가함. 적용은 아직 안함.
 3. 메세지기능 제작중
-4. 김호의 수정사항 업데이트 완료 
+4. 김호의 수정사항 업데이트 완료
+5. 메세지기능 완료 

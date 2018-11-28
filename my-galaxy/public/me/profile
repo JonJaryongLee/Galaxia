@@ -3,6 +3,7 @@
     "comment": "I love you Jon",
     "money":0,
     "img": "me/Sylvie.jpg",
+    "newMessageFlag":true,
     "messages": [
         {
             "num": 0,
@@ -18,6 +19,26 @@
             "num": 2,
             "from": "박준수",
             "message": "자룡아 난 멋진 해군이 될거야"
+        },
+        {
+            "num": 3,
+            "from": "이효균",
+            "message": "자룡아 애비다"
+        },
+        {
+            "num": 4,
+            "from": "박성흠",
+            "message": "이히힣"
+        },
+        {
+            "num": 5,
+            "from": "실비",
+            "message": "봉쥬르"
+        },
+        {
+            "num": 6,
+            "from": "황채린",
+            "message": "안뇽"
         }
     ],
     "planets": [
