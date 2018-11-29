@@ -196,3 +196,6 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 5. 메세지기능 완료 
 6. ppt 팀장으로부터 받음. vue로 임포트중
 7. ppt 이식 완료
+
+## 11월 29일 작업내용
+1. 드래그 앤 드롭 테스트중 뭔가 되긴 되는데 버그 수정해야함.
