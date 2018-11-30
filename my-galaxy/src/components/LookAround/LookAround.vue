@@ -436,7 +436,7 @@
         </div>
         <!--  보유했지만 쓰지 않은 행성 목록입니다. -->
         <div class="drag remainContainer" data-simplebar>
-            <draggable v-model="remainPlanets" class="dragArea" :options="{group:'planet'}">
+            <draggable v-model="remainPlanets" class="dragArea emptyRemainBox" :options="{group:'planet'}">
                 <div class="eachRemainPlanet" v-for="remainPlanet in remainPlanets">
                     <img :src=remainPlanet.img alt="planets" height="80px">
                     </div>
@@ -527,27 +527,31 @@ export default {
 .drag{
     display: inline;
 }
+.screen{
+    position: relative;
+    left:30px;
+    top:20px;
+}
 .screenRow{
     display: block;
 }
-.screenBox{
-    height:85px;
-    width:85px;
-}
+
 .eachScreen{
     display: inline-block;
-    border:1px solid black;
-    min-height:90px;
-    min-width: 90px;
+    min-height:82px;
+    min-width: 82px;
 }
 .remainContainer {
     position: absolute;
-    top:0px;
-    left:1000px;
-    width: 100px;
-    height: 680px;
-    border: 1px solid black;
-    margin-right: 20px;
+    top:20px;
+    left:900px;
+    width: 110px;
+    height: 520px;
+    border: 5px solid #37474F;
+    border-radius: 25px;
     padding: 10px;
+}
+.emptyRemainBox{
+    min-height: 510px;
 }
 </style>

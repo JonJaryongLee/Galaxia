@@ -1,7 +1,5 @@
 <template>
 	<div>
-		<div class="quizSectionTitle display-3">우주 퀴즈</div>
-
 		<div class="lvAndExpBox">
 			<div class="lvBox">
 				레벨 {{level}}
@@ -140,14 +138,10 @@
 </script>
 
 <style type="text/css">
-	.quizSectionTitle{
-		display:block;
-		margin: 40px;
-	}
 	.lvAndExpBox{
 		position: relative;
-		bottom:110px;
-		left:700px;
+		top:20px;
+		left:800px;
 		width: 200px;
 		display: block;
 	}

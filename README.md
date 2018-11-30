@@ -202,3 +202,6 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 
 ## 11월 30일 작업내용
 1. 드래그 앤 드롭 구현성공
+2. 화면 해상도 1024x768 발표용 컴퓨터에 맞추었음. 로그인페이지도 조정했으니 백엔드는 확인할 것
+3. 어제자 호가 카톡으로 보내준 코드 적용 완료. Message.vue에 axios import안 해놓아서 코드 적어놓음
+4. 이상 프런트 작업 끝.

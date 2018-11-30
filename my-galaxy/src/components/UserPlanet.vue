@@ -1,6 +1,6 @@
 <template>
     <div>
-        <v-carousel :cycle='false' :height=680 ref="carousel">
+        <v-carousel :cycle='false' :height=560 ref="carousel">
             <v-carousel-item v-for="planet in planets" :key="planet.num">
                 <div class="speech-bubble">
                     <div class="levelAndExpBox">
@@ -21,7 +21,7 @@
                 <div class="doYouWantToBuy">
                     새로운 토지를 구매하시겠습니까?
                 </div>
-                <div class="moneyInfo">현재 보유금액: {{money}}
+                <div class="moneyInfo">현재 보유금액: {{money}}원
                     <div class="priceInfo">
                         토지는 100원입니다.
                     </div>
@@ -132,7 +132,7 @@ export default {
 <style scoped>
 .planetContainer {
     position: absolute;
-    top: 15%;
+    top: 5%;
     left: 30%;
     display: block;
     width: 550px;
@@ -142,33 +142,34 @@ export default {
 
 .planet {
     position: relative;
-    height: 500px;
+    height: 450px;
 }
 
 .doYouWantToBuy {
     position: relative;
-    top: 170px;
-    left: 140px;
+    top: 130px;
+    left: 110px;
     font-size: 4rem;
 }
 
 .moneyInfo {
     position: relative;
-    top: 230px;
-    left: 450px;
+    text-align: center;
+    top: 180px;
+    left: 30px;
     font-size: 2rem
 }
 
 .buyButton {
     position: relative;
-    top: 300px;
+    top: 250px;
     left: 500px;
 }
 
 .priceInfo {
     position: relative;
+    text-align: center;
     top: 20px;
-    left: 30px;
     font-size: 1.2rem;
     color: aqua;
 }
@@ -191,7 +192,7 @@ export default {
     height: 120px;
     width: 180px;
     top: 80px;
-    left: 850px;
+    left: 780px;
     border: 4px solid white;
     border-radius: 10px;
 }

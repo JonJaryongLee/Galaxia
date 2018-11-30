@@ -75,9 +75,9 @@
 	.quizbox{
 		position: relative;
 		margin-top: 40px;
-		bottom:70px;
+		bottom:90px;
 		padding:40px;
-		width: 950px;
+		width: 1040px;
 	}
 	.quizQuestion{
 		padding-bottom:20px;
@@ -91,6 +91,6 @@
 	}
 	.nextQuestion{
 		position: relative;
-		left:250px;
+		left:295px;
 	}
 </style>

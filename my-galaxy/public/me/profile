@@ -1,8 +1,8 @@
 {
-    "name": "Sylvie",
-    "comment": "I love you Jon",
+    "name": "황채린",
+    "comment": "안녕",
     "money":0,
-    "img": "me/Sylvie.jpg",
+    "img": "me/friend3.jpg",
     "newMessageFlag":true,
     "messages": [
         {
@@ -13,7 +13,7 @@
         {
             "num": 1,
             "from": "이자룡",
-            "message": "실비야 사랑해"
+            "message": "사내답게....살자!!!!^^"
         },
         {
             "num": 2,
@@ -38,7 +38,7 @@
         {
             "num": 6,
             "from": "황채린",
-            "message": "안뇽"
+            "message": "안녕 나야"
         }
     ],
     "planets": [

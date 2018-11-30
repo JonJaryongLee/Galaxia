@@ -21,6 +21,7 @@
     </v-card>
 </template>
 <script type="text/javascript">
+import axios from 'axios'
 export default {
     props: ['selectedFriend'], //상위 컴포넌트에서 선택된 이름입니다.
     data() {
@@ -36,9 +37,9 @@ export default {
 
     // 아래 주석을 해제하면 사용자가 메세지를 입력하면서 Message가 변하는 과정이 log로 찍힙니다. 즉, 사용자의 입력에 따라 실시간으로 Message가 바뀝니다.
     // watch:{
-    // 	Message: function() {
-    // 		console.log("Message: ",this.Message);
-    // 	}
+    //  Message: function() {
+    //      console.log("Message: ",this.Message);
+    //  }
     // },
 
     methods: {
@@ -47,10 +48,11 @@ export default {
             if (this.valid == false)
                 return;
 
-            //메세지를 전송하는 로직을 구현해주세요
-            //선택된 친구이름은 this.selectedFriend입니다.
-            //메세지는 this.Message입니다.
-            //
+            // 서버를 통해, 친구에게 메세지를 전송합니다.
+            const data = new FormData();
+            data.append('name', this.selectedFriend);
+            data.append('message', this.Message);
+            axios.post('/me/message/send', data);
 
             this.$emit('messageClose'); //메세지 창을 종료하기 위해 상위컴포넌트로 신호를 보냅니다.
         },

@@ -21,6 +21,7 @@
                 <v-dialog v-model="showMessageBoxDialog" max-width="500px" transition="dialog-transition">
                     <messageBox ref="messageBox" v-on:closeMessageBox="closeMessageBox"></messageBox>
                 </v-dialog>
+                
                 <v-list-tile @click="runMyPlanet">
                     <v-list-tile-action>
                         <v-icon>home</v-icon>
@@ -272,6 +273,9 @@
             },
             closeMessageBox(){
                 this.showMessageBoxDialog=false;
+
+                // 서버로 수신확인 플래그를 전송한다.
+                axios.post('/me/message/read');
             }
         }
     }
@@ -301,7 +305,8 @@
 
 #myPlanet,
 #quiz,
-#friends {
+#friends,
+#lookAround {
     background: url("assets/img/background.png") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;

@@ -80,7 +80,7 @@ export default {
 </script>
 <style type="text/css" scoped>
 .pptPages{
-    padding:200px;
-    font-size:2rem;
+    padding:150px;
+    font-size:1.6rem;
 }
 </style>
