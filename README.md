@@ -199,3 +199,6 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 
 ## 11월 29일 작업내용
 1. 드래그 앤 드롭 테스트중 뭔가 되긴 되는데 버그 수정해야함.
+
+## 11월 30일 작업내용
+1. 드래그 앤 드롭 구현성공
