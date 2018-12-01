@@ -210,6 +210,7 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 1. 퀴즈 문제 내용이 많아지면 가리거나 밀리는 현상 생김. 해당 항목 css수정함
 2. UserPlanet.vue의 checkMoney항목 수정.
 3. UserPlanet.vue에 addPlanet함수 추가. axios통신 부분 구현 안 함.
-4. Planets길이를 반환해보려 했지만 자꾸 0으로 나와 못함.
-5. UserPlanet.vue 구매 성공 모달 추가함. 
-6. 카로셀 배치 문제가 계속됨. 일단 플래그 달아두고 플래그는 각각의 카로셀 아이템에 v-if으로 달아둠.
+4. Planets길이를 반환해보려 했지만 자꾸 0으로 나와 못함. 이 길이를 받아서 ++한 값을 새로운 행성 num에 넣으려고 했었음.
+5. UserPlanet.vue 구매 성공 다이알로그 추가함. 
+6. 카로셀 맨 뒤로 옮기는 걸 시도해봤는데 인덱스가 엉망이 되서 퀴즈와 경험치,레벨 연동이 안 됨. 그냥 맨 앞에 둠
+7. 주말간 김호 팀원의 LookAround.vue 수정된 코드를 이해하려 했으나, 나의 자바스크립트 실력이 미천하여 코드 리딩에 진전을 보지 못했습니다. 미안합니다. 일요일엔 개인적인 약속이 있어 작업을 하지 못합니다. 월요일에 이 문제에 대해 의논했으면 합니다.
