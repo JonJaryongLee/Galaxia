@@ -1,7 +1,7 @@
 <template>
     <div>
         <v-carousel :cycle='false' :height=560 ref="carousel">
-            <v-carousel-item v-if="showDoYouWantToBuy" v-for="planet in planets" :key="planet.num">
+            <v-carousel-item v-if="planets" v-for="planet in planets" :key="planet.num">
                 <div class="speech-bubble">
                     <div class="levelAndExpBox">
                         <div class="lvBox">
