@@ -212,3 +212,4 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 3. UserPlanet.vue에 addPlanet함수 추가. axios통신 부분 구현 안 함.
 4. Planets길이를 반환해보려 했지만 자꾸 0으로 나와 못함.
 5. UserPlanet.vue 구매 성공 모달 추가함. 
+6. 카로셀 배치 문제가 계속됨. 일단 플래그 달아두고 플래그는 각각의 카로셀 아이템에 v-if으로 달아둠.

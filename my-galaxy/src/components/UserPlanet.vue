@@ -1,7 +1,7 @@
 <template>
     <div>
         <v-carousel :cycle='false' :height=560 ref="carousel">
-            <v-carousel-item v-for="planet in planets" :key="planet.num">
+            <v-carousel-item v-if="showDoYouWantToBuy" v-for="planet in planets" :key="planet.num">
                 <div class="speech-bubble">
                     <div class="levelAndExpBox">
                         <div class="lvBox">
@@ -17,7 +17,7 @@
                     <img class="planet" :src="planet.img" alt="planets">
                 </span>
             </v-carousel-item>
-            <v-carousel-item class="lastCarouselContainer">
+            <v-carousel-item v-if="showDoYouWantToBuy" class="lastCarouselContainer">
                 <div class="doYouWantToBuy">
                     새로운 토지를 구매하시겠습니까?
                 </div>
@@ -77,7 +77,8 @@ export default {
             idx_view: 0,
             planet_url: "",
             cannotPurchaseAlertShow: false,
-            purchaseAlertShow: false
+            purchaseAlertShow: false,
+            showDoYouWantToBuy: false
         }
     },
 
@@ -88,6 +89,7 @@ export default {
 
             // 상위 컴포넌트로부터 유저의 행성 정보 리스트를 불러옵니다.
             this.planets = planets;
+            this.showDoYouWantToBuy = true;
             this.updatePlanetState();
         },
         initMoney(money) {
