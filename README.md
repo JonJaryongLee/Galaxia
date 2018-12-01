@@ -205,3 +205,10 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 2. 화면 해상도 1024x768 발표용 컴퓨터에 맞추었음. 로그인페이지도 조정했으니 백엔드는 확인할 것
 3. 어제자 호가 카톡으로 보내준 코드 적용 완료. Message.vue에 axios import안 해놓아서 코드 적어놓음
 4. 이상 프런트 작업 끝.
+
+##12월 1일 작업내용
+1. 퀴즈 문제 내용이 많아지면 가리거나 밀리는 현상 생김. 해당 항목 css수정함
+2. UserPlanet.vue의 checkMoney항목 수정.
+3. UserPlanet.vue에 addPlanet함수 추가. axios통신 부분 구현 안 함.
+4. Planets길이를 반환해보려 했지만 자꾸 0으로 나와 못함.
+5. UserPlanet.vue 구매 성공 모달 추가함. 

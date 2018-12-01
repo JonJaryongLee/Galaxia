@@ -32,6 +32,23 @@
         <!-- <span class="planetContainer">
             <img id="planet">
         </span> -->
+        
+        <!-- 구매 성공 알람 -->
+        <v-dialog v-model="purchaseAlertShow" max-width="200px" transition="dialog-transition">
+            <v-card>
+                <v-card-text>
+                    행성이 추가되었습니다.
+                </v-card-text>
+                <v-card-actions>
+                    <v-spacer></v-spacer>
+                    <v-btn color="primary" flat @click="purchaseAlertShow = false">
+                        확인
+                    </v-btn>
+                </v-card-actions>
+            </v-card>
+        </v-dialog>
+
+        <!-- 돈 부족하다는 알람 -->
         <v-dialog v-model="cannotPurchaseAlertShow" max-width="200px" transition="dialog-transition">
             <v-card>
                 <v-card-text>
@@ -59,7 +76,8 @@ export default {
             planets: [],
             idx_view: 0,
             planet_url: "",
-            cannotPurchaseAlertShow: false
+            cannotPurchaseAlertShow: false,
+            purchaseAlertShow: false
         }
     },
 
@@ -67,6 +85,7 @@ export default {
         initPlanet(planets) {
             // 선택된 행성 정보입니다. (기본값 : 0)
             this.idx_view = 0;
+
             // 상위 컴포넌트로부터 유저의 행성 정보 리스트를 불러옵니다.
             this.planets = planets;
             this.updatePlanetState();
@@ -119,13 +138,30 @@ export default {
             // document.getElementById("planet").src = this.planet_url;
         },
 
+        //클릭 시 새로운 행성을 추가합니다.
+        addPlanet(){
+            this.planets.push(
+                    {
+                        "num": 10, //테스트용 넘버입니다. 행성길이 +1이 들어가야 합니다.
+                        "name": "default",
+                        "img": "me/planet1.png",
+                        "level": 1,
+                        "exp": 0
+                    }
+                );
+            this.money-=100;
+            this.purchaseAlertShow = true;
+            //axios로 서버에 행성 데이터를 추가해달라 요청해야 합니다.
+        },  
+
         checkMoney() {
             if (this.money < 100)
                 this.cannotPurchaseAlertShow = true;
             else {
-                //구현중
+                this.addPlanet();
+
             }
-        }
+        }        
     }
 }
 </script>

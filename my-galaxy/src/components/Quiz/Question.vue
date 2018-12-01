@@ -1,6 +1,6 @@
 <template>
 	<div class="quizbox">
-		<div class="quizQuestion display-1">{{question}}</div>
+		<div class="quizQuestion">{{question}}</div>
 		<v-btn class="quizAnswers" v-bind:disabled="answerBtnDisabled" v-for="choice in choices" :key="choice.num"
                v-on:click="answerCheck(choice.is_answer)" block color="indigo">{{choice.num}}. {{choice.text}}</v-btn>
 
@@ -80,11 +80,15 @@
 		width: 1040px;
 	}
 	.quizQuestion{
-		padding-bottom:20px;
+        position: fixed;
+        font-size:2rem;
+        position: relative;
+        bottom:60px;
+        width: 740px;
 	}
 	.quizAnswers{
 		height:50px;
-		margin-top:20px;
+		margin-top:5px;
 	}
 	.answerAlert{
 		margin-top: 40px;

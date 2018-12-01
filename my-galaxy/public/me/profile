@@ -1,7 +1,7 @@
 {
     "name": "황채린",
     "comment": "안녕",
-    "money":0,
+    "money":1000,
     "img": "me/friend3.jpg",
     "newMessageFlag":true,
     "messages": [
