@@ -161,6 +161,10 @@
                     for (let i = 0; i < this.planets.length; i++)
                     {
                         let planet = this.planets[i];
+                        // 레벨이 1인 행성은 기본 행성입니다.
+                        if (planet.level === 1) {
+                            this.$refs["myPlanet"].initDefaultPlanet(planet);
+                        }
                         // 레벨이 2인 행성들은 선택 가능합니다.
                         if (planet.level === 2) {
                             this.$refs["myQuiz"].pushChoice(planet);
@@ -220,13 +224,13 @@
                     for (let i = 0; i < this.planets.length; i++)
                     {
                         let planet = this.planets[i];
-                        if (planet.level === level && planet.name === currentPlanet.name) {
+                        if (parseInt(planet.level) === level && planet.name === currentPlanet.name) {
                             this.$refs["myPlanet"].setImage(planet.img);
-                            // 돈 제공
-                            money = (level - 1) * 50;
                             break;
                         }
                     }
+                    // 돈 제공
+                    money = level * 25;
                 }
 
                 // 서버로 데이터를 전송합니다.

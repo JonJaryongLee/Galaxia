@@ -94,6 +94,10 @@ export default {
         initMoney(money) {
             this.money = money;
         },
+
+        initDefaultPlanet(default_planet) {
+            this.default_planet = default_planet;
+        },
         
         getCurrentKey() {
             return this.$refs["carousel"].internalIndex;
@@ -141,28 +145,34 @@ export default {
 
         //클릭 시 새로운 행성을 추가합니다.
         addPlanet(){
+            const PRICE = 100;
+            const default_planet = this.default_planet;
+
             this.planets.push(
                     {
-                        "num": 10, //테스트용 넘버입니다. 행성길이 +1이 들어가야 합니다.
-                        "name": "default",
-                        "img": "me/planet1.png",
-                        "level": 1,
+                        "num": this.planets.length,
+                        "name": default_planet.name,
+                        "img": default_planet.img,
+                        "level": default_planet.level,
                         "exp": 0
                     }
                 );
-            this.money-=100;
+            this.money -= PRICE;
             this.purchaseAlertShow = true;
-            //axios로 서버에 행성 데이터를 추가해달라 요청해야 합니다.
-        },  
+
+            // 서버에 새로운 행성을 구매했음을 알립니다.
+            axios.post('/me/planet/new');
+        }, 
 
         checkMoney() {
-            if (this.money < 100)
+            const PRICE = 100;
+            if (this.money < PRICE)
                 this.cannotPurchaseAlertShow = true;
             else {
                 this.addPlanet();
 
             }
-        }        
+        },   
     }
 }
 </script>
