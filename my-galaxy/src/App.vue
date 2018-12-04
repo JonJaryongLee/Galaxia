@@ -117,11 +117,11 @@
         data: () => ({
             drawer: true,
             logoutAlert: false,
-            showMyPlanet: true,
+            showMyPlanet: false,
             showLookAround: false,
             showFriends: false,
             showQuiz: false,
-            showPPT: false,
+            showPPT: true,
             showMessageBoxDialog: false,
             name: '',
             comment: '',

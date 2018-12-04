@@ -221,3 +221,5 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 ##12월 4일 작업내용
 1. 어제 회의에서 논의된 피피티 수정완료.
 2. UserPlanet.vue 에 axios import시킴.
+3. 황채린이 카톡으로 추가 요청한 것 반영완료
+4. ppt 카로셀 높이 수정.

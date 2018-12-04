@@ -1,5 +1,5 @@
 <template>
-    <v-carousel height="690px" :cycle='false'>
+    <v-carousel height="560px" :cycle='false'>
         <v-carousel-item>
             <page1 class="pptPages"></page1>
         </v-carousel-item>
