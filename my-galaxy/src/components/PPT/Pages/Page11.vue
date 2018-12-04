@@ -1,14 +1,10 @@
 <template>
-    <div><h1> [Back] Rest API </h1>
-        <h4 id="page11Blue"> HTTP에서 URI를 적극 활용하여,클라이언트가 웹 제공자의 컨텐츠를 자유롭게 활용하게끔 하는 API</h4>
+    <div>
+        <p id="page11Title">[Back] Rest API를 이용한 팀 작업</p>
         <ul>
-            <li><h3>Galaxia에선, /me 부터 Rest API 적용 </h3>
+            <li><h3>Front_End 측에서는 가짜 Rest API값을 이용하여, Back_End와 번거롭게 작업할 필요 없음</h3>
             </li>
-            <li><h3> /me/profile </h3>
-            </li>
-            <li><h3> /me/update </h3>
-            </li>
-            <li><h3> /me/planet/list </h3>
+            <li><h3> Back_End 측에서는 Front_End의 작업 현황과 관계없이 서버 프로그래밍을 할 수 있음 </h3>
             </li>
         </ul>
     </div>
@@ -19,7 +15,8 @@ export default {
 }
 </script>
 <style type="text/css" scoped>
-#page11Blue{
-    color:#2196F3;
+#page11Title{
+	font-size: 3.5rem;
+	font-weight: bold;
 }
 </style>

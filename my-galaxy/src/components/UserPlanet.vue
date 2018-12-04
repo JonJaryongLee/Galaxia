@@ -65,6 +65,7 @@
     </div>
 </template>
 <script type="text/javascript">
+import axios from 'axios'
 export default {
     // 기본값
     data() {

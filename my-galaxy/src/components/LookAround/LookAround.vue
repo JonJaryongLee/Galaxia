@@ -92,10 +92,8 @@ export default {
             let id = target.id;
             let args = id.split('_');
             if (args[1] === 'out'){
-                console.log(target.childNodes[0]);
                 let id = target.childNodes[0].id;
                 let args = id.split('_');
-                console.log(args);
                 return [false, -1, -1, -1, 0];
             }
             const x = parseInt(args[2]);

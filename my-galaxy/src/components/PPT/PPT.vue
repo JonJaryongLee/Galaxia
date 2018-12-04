@@ -36,9 +36,6 @@
         <v-carousel-item>
             <page12 class="pptPages"></page12>
         </v-carousel-item>
-        <v-carousel-item>
-            <page13 class="pptPages"></page13>
-        </v-carousel-item>
     </v-carousel>
 </template>
 <script type="text/javascript">
@@ -54,7 +51,6 @@ import page9 from "./Pages/Page9.vue"
 import page10 from "./Pages/Page10.vue"
 import page11 from "./Pages/Page11.vue"
 import page12 from "./Pages/Page12.vue"
-import page13 from "./Pages/Page13.vue"
 export default {
     components: {
         'page1': page1,
@@ -68,8 +64,7 @@ export default {
         'page9': page9,
         'page10': page10,
         'page11': page11,
-        'page12': page12,
-        'page13': page13
+        'page12': page12
     },
     data() {
         return {

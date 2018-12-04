@@ -217,3 +217,7 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 
 ## 12월 3일 작업내용
 1. 김호가 토요일에 보고한 두 개의 소스코드 프런트코드에 반영완료. 깃에 업로드 완료.
+
+##12월 4일 작업내용
+1. 어제 회의에서 논의된 피피티 수정완료.
+2. UserPlanet.vue 에 axios import시킴.
